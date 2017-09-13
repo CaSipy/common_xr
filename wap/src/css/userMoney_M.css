@@ -1,0 +1,584 @@
+.money-img{
+	width: 8rem;
+	height: 8rem;
+}
+.money-con{
+	margin-top: 4rem;
+}
+.money_num{
+	font-size: 2.2rem;
+}
+.money-btn{
+	padding: 0 5%;
+}
+body,.page{
+    background-color: #f8f8f8;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.fix-footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+
+}
+.fix-item{
+    height:2.8rem;
+    line-height:2.8rem;
+    font-size:14px;
+    color:#1AAD19;
+    text-align: center;
+}
+.center-pad{
+    padding:1.5rem 0;
+}
+.center-pad-type{
+    font-size:1.2rem
+}
+.fix-item.active{
+    color:white;
+}
+.money-number{
+    font-size:3rem
+}
+.chose-bor{
+    border-bottom:1px solid black;
+    width:50%;
+    margin:0 auto
+}
+.gold-input{
+    border:none;
+    outline:none;
+    border-bottom:1px solid #999
+}
+.input_mar{
+    padding:1rem 0;
+    overflow:hidden;
+}
+/*充值*/
+.msg-pad{
+    padding-left:1.6rem;
+}
+.msg-pad1{
+    padding-left:1.3rem;
+}
+.calculat_font{
+    font-size:1.2rem;
+}
+.input-size{
+    font-size:2rem;
+}
+.box-top{
+    margin-top:4rem !important;
+}
+
+/*我的资料*/
+.form{
+    position: relative;
+}
+
+/*--------------------------*/
+.backspace{
+    background: #D1D4DD;
+}
+.payfor-img{
+    width: 2rem !important;
+    height: 2rem !important;
+}
+.getM-span{
+    background: #dadada;
+    font-size: 11px;
+    padding: .11em .24em;
+    border-radius: 4px;
+}
+/*--收款金额-----------------------*/
+.money-select{
+    padding-bottom: 4.5rem;
+}
+.dingdan-top-img{
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+}
+
+.ask-con{
+    bottom: 10rem;
+    width: 60%;
+    margin: 0 10%;
+    height: 12rem;
+    display: none;
+    padding: 10%;
+    /*border-radius: 0.1rem;*/
+}
+.ask-con1{
+    bottom: 10rem;
+    width: 80%;
+    margin: 0 10%;
+    height: 12rem;
+    /*border-radius: 0.1rem;*/
+}
+/*--二维码-------------------*/
+
+.ewm-body{
+    background: #429056;
+    width: 94%;
+    padding: 0 3%;
+}
+.ewm{
+    margin-top: 2.5rem;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+.ewm-br{
+    border-radius: .3rem;
+}
+.ewm-bghead{
+    background: #FAFAFA;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.ewm-money{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.font-color{
+    color: #429056;
+}
+.font-color2{
+    color: #565656;
+}
+.font-color3{
+    color: #475577;
+}
+.ewm-img{
+    width: 11rem;
+    height: 11rem;
+}
+.ewm-btn{
+    display: block;
+}
+/*-me页面-------------------------------------------*/
+.text-font-p{
+    font-size: .8rem;
+}
+.me-top-bg{
+    background: #1AAD19;
+}
+.me-header{
+    background: #14D212;
+}
+.me-headerImg{
+    width: 5rem;
+    height: 5rem;
+}
+.me-activity{
+    padding-bottom: 5rem;
+}
+.zuoyou{
+    padding-left:5%;
+    padding-right: 5%;
+}
+.me-img{
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-right: 0.3rem;
+}
+/*--余额-------------------------*/
+.money-body{
+    background: #F0EFF5;
+}
+.money-con{
+    padding-top: 4rem;
+}
+.money-img{
+    width: 8rem;
+    height: 8rem;
+}
+.money-btn{
+    padding: 0 5%;
+}
+/*--佣金---------------------------*/
+.fx-top{
+    width: 90%;
+    padding:0 5%;
+    height: 5.5rem;
+    padding-top: 3.5rem;
+    background: #FFFFFF;
+}
+/*--积分-------------------------*/
+.score-top{
+    width: 90%;
+    padding:0 5%;
+    height: 6rem;
+    padding-top: 4rem;
+    background: #FFFFFF;
+}
+
+/*--一星会员-------------------------*/
+/*会员个数*/
+.star-con{
+    position: relative;
+}
+.star-num{
+    padding: .5rem 0;
+    background: #F0EFF5;
+    box-shadow: -2px 2px 15px rgba(0,0,0,0.3);
+}
+/*头像大小*/
+.star-header{
+    width: 4rem;
+    height: 4rem;
+}
+.star-bottom{
+    border-bottom: 0.05rem solid #E0E0E0;
+}
+/*--余额充值----------------------*/
+/*6个充值价格*/
+.incharge-a{
+    padding: .8rem 0;
+    width: 29%;
+    text-align: center;
+    display: block;
+    border: 0.05rem solid #ded9d9;
+    color: #1AAD19;
+    float: left;
+    font-weight: bold;
+    margin-left: 3%;
+    border-radius: .2rem;
+}
+.incharge-a-check{
+    background: #ded9d9;
+    color: white;
+}
+.incharge-num{
+    border: 0.05rem solid #ded9d9;
+    box-shadow: none;
+    border-radius: 0.3rem;
+    width: 92%;
+    height: 2rem;
+    padding-left: 2%;
+}
+
+/*--公共部分--------------------------*/
+.border-bt{
+    border-top: 0.05rem solid #DDDCE1;
+    border-bottom: 0.05rem solid #DDDCE1;
+}
+
+/*--佣金明细---------------------*/
+.md-clause{
+    height: 2.7rem;
+    padding: .8rem 5%;
+    border-bottom: .07rem solid #C8C8C8;
+}
+.md-clause b{
+    font-weight: normal;
+    color: #8A8A8A;
+}
+.mdc-right{
+    line-height: 2.7rem;
+    color: #14D212;
+}
+.extract-right{
+    line-height: 3rem;
+    color: #000000;
+}
+/*--提取佣金 take_money--------------------*/
+.bank-textColor{
+    color: #5A6079;
+}
+.bank-inputBrb{
+    border-bottom: .08rem solid #DCDCDC;
+}
+.bank-btn{
+    width: 84%;
+    padding: 0 7%;
+}
+.bank-time{
+    color: #f79100;
+}
+.bank-btn-all{
+    width: 90%;
+    padding-left: 5%;
+    color: #1B6D85;
+    font-size: .8rem;
+}
+.bank-div{
+    position: relative;
+}
+.bank-input-i{
+    position: absolute;
+}
+/*--bevip页面-------------------------*/
+.vip-top{
+    background: #E4E4E4;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+}
+.vip-top-Img{
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+.vip-top-p{
+    font-size: .75rem;
+    color: #1AAD19;
+}
+.vip-time-a{
+    padding: .3rem 0;
+    border: 1px solid #999999;
+    color: #999999;
+    display: inherit;
+    width: 22%;
+    text-align: center;
+    float: left;
+    border-radius: .4rem;
+    font-size: 0.8rem;
+    margin-right: .3rem;
+}
+.vip-time-aHover{
+    border: 1px solid #1AAD19;
+    color: #1AAD19;
+}
+.footer-bottom{
+    padding-bottom: 3rem;
+}
+/*转账*/
+.account-contain{
+    background:white;
+    margin:0.5rem auto;
+    font-size:0.9rem;
+}
+.account-contain div{
+    padding:0.8rem 1.3rem;
+}
+.account-contain input{
+    border:none;
+    outline:none;
+    margin-left:0.3rem;
+}
+.msg-form{
+    padding:10px 15px;
+}
+.hx_mgb1{
+    margin-bottom:5px
+}
+.hx_mgb2{
+    margin-bottom:10px
+}
+.weui_grid_add{
+    position: relative;
+    float: left;
+    padding:5px;
+    width: 33.33333333%;
+    box-sizing: border-box;
+
+}
+.weui_grid_add:before{
+    border:none !important
+}
+.weui_grid_add_block{
+    width:98%;height:55px;background:#3c763d;margin:0 auto;text-align:center;line-height:55px;background:white;
+    border-radius:4px;
+    color:#6C6C6C;
+    margin:1% 0;
+
+}
+.weui_grid_add_block.active{
+    background:#4FB569;
+    color:white;
+}
+.tip_c{
+    color:#999;
+}
+.hx_fw{
+    font-weight: bold;
+}
+.hx_addc{
+    color:#F4BD46
+}
+.hx_abc{
+    color:darkred
+}
+.weui_cell_hd_img{
+    width:40px;border-radius:20px;margin-right:5px;display:block
+}
+.hx_pt {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: black !important;
+}
+.myheader{
+    width:auto;height:50px;backgorund:red;line-height:50px;padding-left:10px;background:red;margin-bottom:1em;overflow:hidden
+}
+.weui-mask1{
+    opacity:1;
+    visibility: inherit !important;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    visibility: hidden;
+    z-index:1000;
+    background: rgba(0, 0, 0, .6);
+}
+/*弹出框*/
+.toclose{
+    position:absolute;
+    top:0.5rem;
+    right:0.5rem;
+    font-size:0.8rem;
+}
+.popup-title{
+    padding:0.5rem 0;
+    text-align:center;
+    font-size:0.9rem;
+    border-bottom:1px solid #d9d9d9;
+}
+.popup-item{
+    width:99%;
+    text-align:center;
+    margin:0 auto;
+    height:2.8rem;
+    line-height:2.8rem;
+    background:white;
+    border-radius:5px;
+
+}
+.popup-item.active{
+    background:#008CD7;
+    color:white;
+}
+.btn-sure{
+    width:100%;
+    text-align:center;
+    color:#000000;
+    background:white;
+    height:2.8rem;
+    line-height:2.8rem;
+    font-size:1rem;
+    border-top:0.3rem solid #eeeeee;
+}
+.weui-picker-modal{
+    background:#FAFAFA !important;
+}
+.time-border{
+    border-bottom:1px solid #008CD7;
+    padding:0.5rem;
+}
+.time-cancel-btn{
+    border-left:1px solid #F0EFF5;
+    border-top:1px solid #F0EFF5;
+    padding:0.5rem 0;
+}
+.time-sure-btn{
+    border-left:1px solid #F0EFF5;
+    border-top:1px solid #F0EFF5;
+    padding:0.5rem 0;
+}
+/*弹出框*/
+.time_box{
+    position:fixed;width:80%;left:10%;z-index:10000;height:auto;bottom:10rem;background:white;visibility:hidden;
+}
+.time_box input{
+    color:#008CD7;
+}
+.close_keyboard{width:100%;height:2rem;border-bottom:1px solid #efeef0;clear:both;text-align:center;line-height:2rem;}
+.log_title{
+    padding:5px 15px;
+    border-bottom:1px solid #efeef0;
+    position:fixed;
+    left:0;top: 2.5rem;
+    right:0;
+    z-index:800;
+    background:#F7F7F7
+}
+
+/*---小二修改--------------------------------*/
+
+.uMoney_borLeft{
+	border-left: 1px solid #D6D6D6;
+}
+.uMoney_borBottom{
+	border-bottom: 1px solid #D6D6D6;
+}
+
+.uMoney_title{
+	margin-left: .5rem;
+	height: 2rem;
+	line-height: 2rem;
+}
+
+.cou_article{
+	width: 94%;
+	margin: 1rem auto 0;
+}
+.cou_figure{
+	border: 1px solid #666666;
+	
+	margin-bottom: .8rem;	
+}
+.cou_figLeft{
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-right: 0 !important;
+	height: 4rem !important;
+	line-height: 4rem !important;
+}
+.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before{
+	color: #008CD7;
+}
+.time_out{
+	width: 3rem;
+	height: 3rem;
+	border: 2px solid #D6D6D6;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 3rem;
+	transform:rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	color: #D6D6D6;
+}
+.cou_size{
+	line-height:1.2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+.unuserful_size{
+	color: #D6D6D6 !important;
+}
+.unuserful{
+	border: 1px solid #D6D6D6;
+	color: #D6D6D6 !important;
+}
+.userful{
+	border: 1px solid #008CD7 ;
+	color: #008CD7  !important;
+	box-shadow: 3px 3px 15px rgba(0,140,215,.3);
+}
+/*-addService-------------------------*/
+.addS_img{
+	width: 97%;
+}
+b{
+	font-weight: normal;
+}
+/*--共用----------------------------------*/
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}
+.weui-tabbar__item.weui-bar__item--on .weui-tabbar__label{
+	color: #008CD7 !important;
+}

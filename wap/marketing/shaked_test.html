@@ -1,0 +1,204 @@
+<!doctype html>
+<head > <meta charset = "utf-8" />
+    <title>摇一摇抢红包</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--oss库资源引用-->
+    <!--字体图标库-->
+    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+    <!--当前项目样式引用-->
+    <link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/css/wap.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/shaked.css">
+    <link rel="stylesheet" href="http://common.huibaoming.cn/animate/3.5.2/animate.min.css">
+</head >
+<body ng-app="app" ng-controller="ctrl" >
+<div class="dim hide" id="dim">
+    <div class="dim_bg"></div>
+    <div class="dim_loading">
+        <i class="icon icon-spinner icon-spin"></i>
+    </div>
+</div>
+<!--<button ng-click="shake_shake()">摇一摇</button> -->
+<div class="contanier"  style="background-image: url('http://common.huibaoming.cn/wap/images/haivit/bg5.png');" ng-click="close_result()">
+    <div class="shake">
+        <div class="circle"></div>
+        <div class="redbag"><img src="http://common.huibaoming.cn/wap/images/haivit/redbag.png" alt=""></div>
+        <div id="hand" class="hand">
+            <img src="http://common.huibaoming.cn/wap/images/haivit/hand3.png">
+        </div>
+        <div class="annulus" id="annulus"></div>
+    </div>
+    <div class="music" >
+        <img ng-src="{{music_url}}" class="music-animate"  alt="" ng-click="close_music($event)">
+    </div>
+    <audio autoplay loop preload="auto" id="myAudio">
+        <source src="http://common.huibaoming.cn/wap/images/haivit/yisibugua.mp3" type="audio/mpeg">
+    </audio>
+    <div class="rule_btn rule_btn-animate"   ng-click="rule(1)"><span id="rule">规则</span></div>
+    <div class="gift " ng-click="rule(2)">
+        <img src="http://common.huibaoming.cn/wap/images/haivit/gift.png" alt="" class="gift-animate" id="gift">
+    </div>
+    <div class="shaked_bottom">
+        <div class="people_num">
+            已有 <span ng-bind="people_num">1111</span> 人参与
+        </div>
+        <div class="times_num">
+            您还有 <span ng-bind="times_num">0</span> 次抽奖机会
+        </div>
+    </div>
+    <!--抽中红包时的显示-->
+    <div class="good hide" id="good">
+        <div class="good_bg" ng-click="close_window($event)" style="background-image: url('http://common.huibaoming.cn/wap/images/haivit/good_bg.png')"></div>
+        <div class="good_bag " id="good_bag">
+            <!--摇出红包的情况-->
+            <div id="shake_bag " class="shake_bag " style="background-image: url('http://common.huibaoming.cn/wap/images/haivit/good_bag.png')">
+                <span><img src="http://common.huibaoming.cn/wap/images/haivit/close.png" class="close_btn" alt="" ng-click="close_good($event)"></span>
+                <p><span id="good_money">1.00</span>元</p>
+            </div>
+            <!--摇出优惠券的情况-->
+            <div id="shake_coupon " class="shake_coupon weui-flex " style="background-image: url('http://common.huibaoming.cn/wap/images/haivit/coupon_bg.png')">
+                <span><img src="http://common.huibaoming.cn/wap/images/haivit/close.png" class="close_btn" alt="" ng-click="close_good($event)"></span>
+                <div class="flex_item3 text-c fig_Lsize" id="coupon_money">10.00
+                </div>
+                <div class="flex_item4 fig_Rsize">
+                    <header class="text-c text-weight3" id="coupon_title">卡券</header>
+                    <article class="fig_Rart text-l">
+                        <p id="coupon_limit_time">2017-06-06至2017-07-07</p>
+                        <p>前往卡券中心查收</p>
+                        <p>只用于商城购物</p>
+                    </article>
+                </div>
+            </div>
+            <div id="shake_integral" class="shake_integral " style="background-image: url('http://common.huibaoming.cn/wap/images/haivit/integral.png')">
+                <span><img src="http://common.huibaoming.cn/wap/images/haivit/close.png" class="close_btn" alt="" ng-click="close_good($event)"></span>
+                <p class="integral_money" ><span id="integral_money">00.00</span>积分</p>
+                <p class="integral_explain">已存入钱包>></p>
+                <div class="integral_btn" ng-click="close_good($event)">
+                    再来一次
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--抽不中红包时的显示-->
+    <div class="bad hide" id="bad">
+        <div class="bad_bg" ng-click="close_window($event)"></div>
+        <div class="bad_bag " id="bad_bag" style="background-image: url('http://common.huibaoming.cn/wap/images/haivit/bad_bag.png')">
+            <div>谢谢参与</div>
+        </div>
+        <div class="bad_btn" id="bad_btn">
+            再来一次
+        </div>
+    </div>
+    <!--金币不足时的显示-->
+    <div class="lack hide" id="lack">
+        <div class="lack_bg" ng-click="close_window($event)"></div>
+        <div class="lack_bag " id="lack_bag">
+            <div class="lack_bag_top">
+                <p>很遗憾!</p>
+            </div>
+            <div class="lack_bag_bottom">
+                <div class="lack_cause mar-t5 mar-b5">
+                    <p>您的金币不足喔~！</p>
+                    <p>本次活动需要花费 <span ng-bind="json.tool.price"></span>金币</p>
+                </div>
+                <!--<div class="lack_btn" id="lack_btn">
+                    <div class="cancel fl">取消</div>
+                    <div class="recharge fr">去充值</div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <!--操作失败的显示-->
+    <div class="fail hide" id="fail">
+        <div class="fail_bg" ng-click="close_window($event)"></div>
+        <div class="fail_con">
+            <img src="http://common.huibaoming.cn/wap/images/haivit/fail.png" alt="">
+        </div>
+    </div>
+    <!--活动规则-->
+    <div id="about" class="weui-popup__container" >
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal" style="background:rgba(0,0,0,0.8) !important;">
+            <div class="icon-remove icon_close" ng-click="pop_close()" style="font-size: 1.3rem;"></div>
+            <div class="weui-flex pop_tab">
+                <div class="weui-flex__item" >
+                    <p ng-click="tab(1)">操作流程</p>
+                    <li ng-class="{'tab_active':tab_num==1}"></li>
+                </div>
+                <div class="weui-flex__item" ng-click="tab(2)">
+                    <p ng-click="tab(2)">奖品记录</p>
+                    <li ng-class="{'tab_active':tab_num==2}"></li>
+                </div>
+            </div>
+            <div id="rule1">
+                <div class="rule" style="margin-top:3rem" >
+                    <div class="bc-text-header mar-b3"><h4>操作流程</h4></div>
+                    <!--<div class="weui-row rule_item">-->
+                    <!--<div class="weui-col-20"><div class="num">1</div></div>-->
+                    <!--<div class="weui-col-80"><span class="text-font3">登录淘宝\京东平台，确认收货</span></div>-->
+                    <!--</div>-->
+                    <!--<div class="weui-row rule_item">-->
+                    <!--<div class="weui-col-20"><div class="num">1</div></div>-->
+                    <!--<div class="weui-col-80"><span class="text-font3">登录淘宝\京东平台，确认收货</span></div>-->
+                    <!--</div>-->
+                    <!--<div class="weui-row rule_item">-->
+                    <!--<div class="weui-col-20"><div class="num">1</div></div>-->
+                    <!--<div class="weui-col-80"><span class="text-font3">登录淘宝\京东平台，确认收货</span></div>-->
+                    <!--</div>-->
+                    <div class="rule_msg">
+                        <p>1、登录淘宝\京东平台，确认收货</p>
+                        <p>2、淘宝截图</p>
+                        <p>3、进入公众号</p>
+                        <p>4、上传截图</p>
+                        <p>5、后无截图证明不能领取奖励</p>
+                    </div>
+
+                </div>
+                <div class="rule">
+                    <div class="bc-text-header mar-b3"><h4>活动规则</h4></div>
+                    <div class="rule_msg">
+                        <p>1、评价后无截图证明不能领取奖励</p>
+                        <p>2、证明不能领取奖励</p>
+                        <p>3、截图证明不能领取奖励</p>
+                        <p>4、评价后无截图证明励</p>
+                        <p>5、后无截图证明不能领取奖励</p>
+                        <p>6、评明不能领取奖励</p>
+                    </div>
+                </div>
+            </div>
+            <div  id="rule2" class="hide">
+                <div class="rule">
+                    <div class="award_item">
+                        <div class="award_msg">
+                            <p class="text-font5 mar-b1">八等奖：5元无门槛优惠券</p>
+                            <p>兑换日期：2017.6.5至u2017.3.3</p>
+                        </div>
+                        <div class="award_status">
+                            <p class="active">未核销</p>
+                        </div>
+
+                    </div>
+                    <div class="award_item">
+                        <div class="award_msg">
+                            <p class="text-font5 mar-b1">红包：好评微信红包</p>
+                            <p>发放日期：2017.6.5</p>
+                        </div>
+                        <div class="award_status">
+                            <p class="active">已发放</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+<script src="http://common.huibaoming.cn/angular/angular.js"></script>
+<script src="http://common.huibaoming.cn/angular/angular-sku.js"></script>
+<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+<script type="text/javascript" charset="utf-8" src="../src/js/shaked.js"></script>
+</body>
+</html >

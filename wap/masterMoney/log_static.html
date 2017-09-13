@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>明细</title>
+		<link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+		<link rel="stylesheet" href="../src/css/userMoney_M.css">
+		<link rel="stylesheet" href="../src/css/wap_public.css">
+		<link rel="stylesheet" href="../src/css/wap.css">
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="back-header weui-flex bg-white header_bBor">
+			<span class="back-header-icon icon-chevron-left flex_item1 sc-text-blue" onclick="javascript:window.history.go(-1);"></span>
+			<h1 class="back-header-h1 flex_item4 sc-text-blue">佣金明细</h1>
+			<a class="flex_item1 header-right sc-text-blue" onclick="submit()">筛选</a>
+		</header>
+		<div class="weui-cell log_title">
+			<div class="weui-cell__bd weui-cell_primary">
+				<p>2017年2月</p>
+				<p class="text-font3 tip_c">支出￥298.0 &nbsp; 收入￥i874</p>
+			</div>
+			<div class="weui-cell__hd" id="showIOSActionSheet">
+				<i class="icon-calendar" id="picker-name"></i>
+				<div class="getNeW-title text-c mar-t3" id="ask" name="showIOSActionSheet">
+					<b class="text-font3 sc-text-gray mar-t2 text-weight"></b>
+				</div>
+			</div>
+		</div>
+		<div style="margin-top:5.6rem;">
+			<div class="weui-cells " style="margin-top:0" id="con">
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+				<a class="weui-cell weui-cells_access" href="detail.html">
+					<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+					<div class="weui-cell__bd weui-cell_primary">
+						<p class="text-font4">红包-来自林某某</p>
+						<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+					</div>
+					<div class="weui-cell__bd text-r">
+						<p class="hx_addc hx_fw">+1.12</p>
+						<p class="text-font1 hx_abc">剩余2233</p>
+					</div>
+				</a>
+
+			</div>
+			<div class="weui-loadmore hide">
+				<i class="weui-loading"></i>
+				<span class="weui-loadmore__tips">正在加载</span>
+			</div>
+		</div>
+
+		<!--弹出框-->
+		<div id="about" class="weui-popup__container  popup-bottom">
+			<div class="weui-popup__overlay weui-popup-overlay"></div>
+			<div class="weui-popup__modal" style="overflow:inherit;background:#F8F8F8">
+				<!--关闭按钮-->
+				<span class="toclose close-popup">关闭</span>
+				<!--头部区域-->
+				<div class="popup-title">
+					<span>选择交易类型</span>
+				</div>
+				<!--选择区域,可垂直滚动-->
+				<div class="popup-container text-font2">
+					<div class="weui-grids pad-t4" id="sel">
+						<div href="javascript:;" class="weui_grid_add">
+							<div class="popup-item active">全部</div>
+						</div>
+						<div href="javascript:;" class="weui_grid_add ">
+							<div class="popup-item">红包</div>
+						</div>
+						<div href="javascript:;" class="weui_grid_add ">
+							<div class="popup-item">转账</div>
+						</div>
+						<div href="javascript:;" class="weui_grid_add ">
+							<div class="popup-item">群收款</div>
+						</div>
+						<div href="javascript:;" class="weui_grid_add ">
+							<div class="popup-item">商户消费</div>
+						</div>
+						<div href="javascript:;" class="weui_grid_add ">
+							<div class="popup-item">全部</div>
+						</div>
+						<div href="javascript:;" class="weui_grid_add ">
+							<div class="popup-item">全部</div>
+						</div>
+
+					</div>
+				</div>
+				<!--底部按钮区域-->
+				<!--<div class="footer-fixed">-->
+				<!--<div class="btn-sure">确认</div>-->
+				<!--</div>-->
+			</div>
+
+		</div>
+		<!--弹出框-->
+		<div>
+			<div class="weui-mask1" id="iosMask" style="display:none;"></div>
+			<div class="time_box" id="time_box">
+				<div id="picker-container">
+					<div class="time-border"><input class="weui-input" id="inline" type="text" value="" readonly=""></div>
+				</div>
+				<div class="weui-flex bg-white text-c">
+					<div class="weui-flex__item time-cancel-btn" id="cancel">取消</div>
+					<div class="weui-flex__item time-sure-btn" id="sure">确认</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/city-picker.js"></script>
+	<script>
+		function submit() {
+			$("#about").popup();
+		}
+		//    滚动加载
+		var loading = false; //状态标记
+		$(document.body).infinite().on("infinite", function() {
+			$('.weui-loadmore').removeClass('hide');
+			if(loading) return;
+			loading = true;
+			setTimeout(function() {
+				$('#con').append('<a class="weui-cell weui-cells_access" href="detail.html">' +
+					'<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>' +
+					' <div class="weui-cell__bd weui-cell_primary">' +
+					'<p class="text-font4">红包-来自林某某</p>' +
+					' <p class="text-font4 tip_c">2月20号&nbsp;12:90</p>' +
+					'  </div>' +
+					'  <div class="weui-cell__bd text-r">' +
+					'  <p class="hx_addc hx_fw">+1.12</p>' +
+					' <p class="text-font1 hx_abc">剩余2233</p>' +
+					'</div>' +
+					' </a>');
+				$('.weui-loadmore').addClass('hide');
+				loading = false;
+			}, 1500); //模拟延迟
+		});
+		var data1 = ['2011', '2012', '2013', '2014', '2015', '2016', '2017'];
+		var num = 0;
+		var date = [{
+			year: 2011,
+			mouth: ['1']
+		}, {
+			year: 2012,
+			mouth: ['1', '2']
+		}, {
+			year: 2013,
+			mouth: ['1', '2', '4']
+		}, {
+			year: 2014,
+			mouth: ['1', '2', '3', '4', ]
+		}, {
+			year: 2015,
+			mouth: ['1', '2', '3', '4', '5']
+		}, {
+			year: 2016,
+			mouth: ['1', '2', '3', '4', '5', '6']
+		}, {
+			year: 2017,
+			mouth: ['1', '2', '3', '4', '5', '6', '7']
+		}];
+		var date3 = [{
+			"2011": ['1']
+		}, {
+			"2012": ['1', '2']
+		}, {
+			"2013": ['1', '2', '4']
+		}, {
+			"2014": ['1', '2', '3', '4', ]
+		}, {
+			"2015": ['1', '2', '3', '4', '5']
+		}, {
+			"2016": ['1', '2', '3', '4', '5', '6']
+		}, {
+			"2017": ['1', '2', '3', '4', '5', '6', '7']
+		}];
+//		alert(date3[2017]);
+		var data2 = date[6].mouth;
+		var year = 2017;
+		var mouth = 4;
+//		alert(typeof(year));
+		//时间筛选弹出js-------------------------------------------------------------
+		//    $("#inline").picker("setValue", ["2012", "1"]);
+		$("#inline").picker({
+			container: '#picker-container',
+			value: [year, mouth],
+			cols: [{
+				textAlign: 'center',
+				values: data1
+					//如果你希望显示文案和实际值不同，可以在这里加一个displayValues: [.....]
+			}, {
+				textAlign: 'center',
+				values: data2
+			}],
+			onChange: function(value) {
+				console.log(value.cols[1]);
+				value.cols[1].values = ['55', '4444'];
+				//            console.log(value.cols[0].activeIndex);
+				////           data2=date[value.cols[0].activeIndex].mouth;
+				//          console.log(date[value.cols[0].activeIndex].mouth);
+			}
+		});
+
+		var $time_box = $('#time_box');
+		var $iosMask = $('#iosMask');
+		var $cancel = $('#cancel');
+		var $sure = $('#sure');
+
+		$('#picker-name').click(function() {
+			$iosMask.fadeIn();
+			$time_box.css('visibility', 'visible');
+			$time_box.css('opacity', 1);
+		});
+		$iosMask.click(function() {
+			$iosMask.fadeOut();
+			$time_box.css('opacity', 0);
+			$time_box.css('visibility', 'hidden');
+		});
+		$cancel.click(function() {
+			$iosMask.fadeOut();
+			$time_box.css('opacity', 0);
+			$time_box.css('visibility', 'hidden');
+		});
+		$sure.click(function() {
+			$iosMask.fadeOut();
+			$time_box.css('opacity', 0);
+			$time_box.css('visibility', 'hidden');
+		});
+//		选择交易类型
+		$("#sel").find("div.popup-item").each(function(){
+			$(this).click(function(){
+				$("#sel").find("div.popup-item").removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
+
+</html>

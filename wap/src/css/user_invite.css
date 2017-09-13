@@ -1,0 +1,39 @@
+b{
+	font-weight: normal;
+}
+.Code-body{
+	width: 90%;
+	margin: auto;
+	margin-top: 4rem;
+	border: .05rem solid #999988;
+	box-shadow: 1px 1px 7px rgba(0,0,0,.2);
+}
+.Code-header{
+	padding-left: 3rem;
+}
+.Code-img{
+	width: 12rem;
+	height: 12rem;
+}
+.Code-btn{
+	width: 50%;
+	margin: 1.5rem auto;
+	height: 2rem;
+	line-height: 2rem;
+	font-weight: bold;
+}
+.audit_header2{
+	margin-top: 5rem;
+	text-align: center;
+	color: #008CD7;
+	font-size: 10rem;
+}
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}

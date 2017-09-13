@@ -1,0 +1,24 @@
+
+/*-addService-------------------------*/
+.addS_img{
+	width: 97%;
+}
+b{
+	font-weight: normal;
+}
+.addS_bor{
+	border: 1px solid #D7D7D7;
+}
+/*--共用----------------------------------*/
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}
+.fix_containner{
+	margin-top: 4rem;
+}

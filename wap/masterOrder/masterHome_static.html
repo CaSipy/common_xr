@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+		<link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+		<link rel="stylesheet" href="../src/css/wap.css">
+    <link rel="stylesheet" href="../src/css/indent.css">
+</head>
+<body class="bg-wechat">
+    
+    <div class="">
+        <!-- 容器 -->
+        <div class="weui-tab">
+            <nav class="weui-navbar">
+                <a class="weui-navbar__item text-font2 weui-bar__item--on" href="#tab1">
+                    	我要抢单
+                </a>
+                <a class="weui-navbar__item text-font2" href="#tab2">
+                    	我要接单
+                </a>
+                <a class="weui-navbar__item text-font2" href="#tab3">
+                    	取消申请
+                </a>
+            </nav>
+            <section class="weui-tab__bd">
+                <article id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <figure>
+                        <div class="apply_list">
+                            <div class="weui-row">
+                                <div class="weui-col-75 mar-t2 apply_msg">
+                                    <p>
+                                        <span class="apply_active" ng-bind="'￥'+item.total_price">清洗空调</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">x1</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">天河区</span>
+                                    </p>
+                                    <p>
+                                        <span class="sc-text-gray text-font2" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">服务时间：2017-4-4</span>
+                                    </p>
+                                </div>
+                                <div class="weui-col-25">
+                                    <div class="weui-btn weui-btn_mini weui-btn_primary text-font2 fr  mar-t2">抢单</div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="apply_list">
+                            <div class="weui-row">
+                                <div class="weui-col-75 mar-t2 apply_msg">
+                                    <p>
+                                        <span class="apply_active" ng-bind="'￥'+item.total_price">清洗空调</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">x1</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">天河区</span>
+                                    </p>
+                                    <p>
+                                        <span class="sc-text-gray text-font2" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">服务时间：2017-4-4</span>
+                                    </p>
+                                </div>
+                                <div class="weui-col-25">
+                                    <div class="weui-btn weui-btn_mini weui-btn_primary text-font2 fr  mar-t2">抢单</div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+                <article id="tab2" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <figure>
+                        <div class="apply_list">
+                            <div class="weui-row">
+                                <div class="weui-col-60 mar-t2 apply_msg">
+                                    <p>
+                                        <span class="apply_active" ng-bind="'￥'+item.total_price">清洗空调</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">x1</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">天河区</span>
+                                    </p>
+                                    <p>
+                                        <span class="sc-text-gray text-font2" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">服务时间：2017-4-4</span>
+                                    </p>
+                                </div>
+                                <div class="weui-col-40">
+                                    <div class="weui-btn weui-btn_mini weui-btn_primary text-font2 fr  mar-t2">拒绝</div>
+                                    <div class="weui-btn weui-btn_mini weui-btn_primary text-font2 fr  mar-t2">接单</div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="apply_list">
+                            <div class="weui-row">
+                                <div class="weui-col-75 mar-t2 apply_msg">
+                                    <p>
+                                        <span class="apply_active" ng-bind="'￥'+item.total_price">清洗空调</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">x1</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">天河区</span>
+                                    </p>
+                                    <p>
+                                        <span class="sc-text-gray text-font2" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">服务时间：2017-4-4</span>
+                                    </p>
+                                </div>
+                                <div class="weui-col-25">
+                                    <div class="weui-btn weui-btn_mini weui-btn_primary text-font2 fr  mar-t2">接单</div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+                <article id="tab3" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <figure>
+                        <div class="apply_list">
+                            <div class="weui-row">
+                                <div class="weui-col-75 mar-t2 apply_msg">
+                                    <p>
+                                        <span class="apply_active" ng-bind="'￥'+item.total_price">清洗空调</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">x1</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">天河区</span>
+                                    </p>
+                                    <p>
+                                        <span class="sc-text-gray text-font2" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">取消理由：XXX</span>
+                                    </p>
+                                </div>
+                                <div class="">
+                                    <div class="weui-btn weui-btn_mini weui-btn_primary text-font2 fr  mar-t2">确认取消</div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="apply_list">
+                            <div class="weui-row">
+                                <div class="weui-col-75 mar-t2 apply_msg">
+                                    <p>
+                                        <span class="apply_active" ng-bind="'￥'+item.total_price">清洗空调</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">x1</span>
+                                        <span class="sc-text-gray text-font3 mar-l3" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">天河区</span>
+                                    </p>
+                                    <p>
+                                        <span class="sc-text-gray text-font2" ng-bind="item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'">取消理由：XXX</span>
+                                    </p>
+                                </div>
+                                <div class="">
+                                    <div class="weui-btn weui-btn_mini weui-btn_primary text-font2 fr  mar-t2">确认取消</div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+            </section>
+        </div>
+
+    </div>
+    
+    <div class="weui-loadmore hide">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+
+</body>
+<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+<script src="http://common.huibaoming.cn/angular/angular.js"></script>
+<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+<!--<script src="../src/js/userGroup_Checklist.js"></script>-->
+</html>

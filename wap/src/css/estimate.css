@@ -1,0 +1,59 @@
+i{
+	font-style: normal;
+}
+b{
+	font-weight: normal;
+}
+
+/*--evaluation-------------------------*/
+.eva_img{
+	width: 3rem !important;
+	height: 3rem !important;
+}
+.eva_star{
+	font-size: 2rem;
+	color: #BCBCBC;
+	margin-right: .3rem;
+}
+.starEva {
+	text-align: center;
+	height: 4rem;
+	line-height: 4.7rem;
+}
+.eva_active{
+	color: #FFCB63;
+}
+.eva_say{
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1rem;
+	text-align: center;
+}
+.eva_figure{
+	padding-bottom: 1.5rem;
+}
+.eva_trea{
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #d6d6d6;
+}
+.eva_btn{
+	margin: 2rem auto;
+}
+/*--师傅查看评价----------------------------------------*/
+.eva_trea_M{
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #d6d6d6;
+	box-sizing: border-box;
+}
+/*--共用----------------------------------*/
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}

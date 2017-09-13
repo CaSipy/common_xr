@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://www.suchso.com/code/wxshake/ -->
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>摇一摇抢红包</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--oss库资源引用-->
+    <!--字体图标库-->
+    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+    <!--当前项目样式引用-->
+    <link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/css/wap.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/shaked.css">
+</head>
+<body>
+<div class="contanier">
+    <div class="shake">
+        <div class="circle"></div>
+        <div class="redbag"><img src="images/redbag.png" alt=""></div>
+        <div id="hand" class="hand">
+            <img src="images/hand3.png">
+        </div>
+        <div class="annulus"></div>
+    </div>
+    <div class="music"><img src="images/open_music.png" alt=""></div>
+    <div class="rule_btn" id="rule" ng-click="">规则</div>
+    <div class="gift"><img src="images/gift.png" alt=""></div>
+    <div class="shaked_bottom">
+        <div class="people_num">
+            已有 <span>1333</span> 人参与
+        </div>
+        <div class="times_num">
+            您还有 <span>0</span> 次抽奖机会
+        </div>
+    </div>
+    <div id="loading" class="loading ">
+        <span class="icon">
+        </span>
+            <span class="txt">
+            正在努力的加载结果，请稍候~
+        </span>
+    </div>
+    <div id="result" class="result ">
+        <!--<div class="con">
+            <div class="imgLeft">
+                <img src="images/logo_com01.jpg">
+            </div>
+            <div class="contRight">
+                <p class="mainTitle">
+                    不要再摇啦
+                </p>
+                <p class="subTitle">
+                    晕死啦
+                </p>
+            </div>
+        </div>-->
+    </div>
+    <!--规则-->
+    <div id="about" class="weui-popup__container weui-popup__container--visible" style="display: none;">
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal" style="background:rgba(0,0,0,0.8) !important;">
+            <div class="icon-remove text-font5 icon_close" ng-click="pop_close()"></div>
+            <div class="weui-flex pop_tab">
+                <div class="weui-flex__item">
+                    <p ng-click="tab(1)">操作流程</p>
+                    <li ng-class="{'tab_active':tab_num==1}" class="tab_active"></li>
+                </div>
+                <div class="weui-flex__item" ng-click="tab(2)">
+                    <p ng-click="tab(2)">奖品记录</p>
+                    <li ng-class="{'tab_active':tab_num==2}" class=""></li>
+                </div>
+            </div>
+            <div id="rule1">
+                <div class="rule" style="margin-top:3rem">
+                    <div class="bc-text-header mar-b3"><h4>操作流程</h4></div>
+                    <!--<div class="weui-row rule_item">-->
+                    <!--<div class="weui-col-20"><div class="num">1</div></div>-->
+                    <!--<div class="weui-col-80"><span class="text-font3">登录淘宝\京东平台，确认收货</span></div>-->
+                    <!--</div>-->
+                    <!--<div class="weui-row rule_item">-->
+                    <!--<div class="weui-col-20"><div class="num">1</div></div>-->
+                    <!--<div class="weui-col-80"><span class="text-font3">登录淘宝\京东平台，确认收货</span></div>-->
+                    <!--</div>-->
+                    <!--<div class="weui-row rule_item">-->
+                    <!--<div class="weui-col-20"><div class="num">1</div></div>-->
+                    <!--<div class="weui-col-80"><span class="text-font3">登录淘宝\京东平台，确认收货</span></div>-->
+                    <!--</div>-->
+                    <div class="rule_msg">
+                        <p>1、登录淘宝\京东平台，确认收货</p>
+                        <p>2、淘宝截图</p>
+                        <p>3、进入公众号</p>
+                        <p>4、上传截图</p>
+                        <p>5、后无截图证明不能领取奖励</p>
+                    </div>
+
+                </div>
+                <div class="rule">
+                    <div class="bc-text-header mar-b3"><h4>活动规则</h4></div>
+                    <div class="rule_msg">
+                        <p>1、评价后无截图证明不能领取奖励</p>
+                        <p>2、证明不能领取奖励</p>
+                        <p>3、截图证明不能领取奖励</p>
+                        <p>4、评价后无截图证明励</p>
+                        <p>5、后无截图证明不能领取奖励</p>
+                        <p>6、评明不能领取奖励</p>
+                    </div>
+                </div>
+            </div>
+            <div id="rule2" class="hide" style="display: none;">
+                <div class="rule">
+                    <div class="award_item">
+                        <div class="award_msg">
+                            <p class="text-font5 mar-b1">八等奖：5元无门槛优惠券</p>
+                            <p>兑换日期：2017.6.5至u2017.3.3</p>
+                        </div>
+                        <div class="award_status">
+                            <p class="active">未核销</p>
+                        </div>
+
+                    </div>
+                    <div class="award_item">
+                        <div class="award_msg">
+                            <p class="text-font5 mar-b1">红包：好评微信红包</p>
+                            <p>发放日期：2017.6.5</p>
+                        </div>
+                        <div class="award_status">
+                            <p class="active">已发放</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var audio_shake;
+    window.onload = function() {
+        initAudio();
+    }
+    //预先载入声音文件
+    var initAudio = function() {
+        audio_shake = document.createElement("audio");
+        audio_shake.src = 'mp3/shakes.mp3';
+    }
+    var SHAKE_THRESHOLD = 1800;
+    var last_update = 0;
+    var x = y = z = last_x = last_y = last_z = 0;
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);//添加监听事件
+    } else {
+        alert('抱歉，你的手机配置实在有些过不去，考虑换个新的再来试试吧');
+    }
+    var times = 0;
+    function deviceMotionHandler(eventData) {
+        var acceleration = eventData.accelerationIncludingGravity;
+        var curTime = new Date().getTime();
+        if ((curTime - last_update) > 100) {
+            var diffTime = curTime - last_update;
+            last_update = curTime;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+            if (speed > SHAKE_THRESHOLD) {
+                doResult();
+                times++;
+            }
+            last_x = x;
+            last_y = y;
+            last_z = z;
+        }
+    }
+    //播放控制
+    function autoPlay() {
+        var index = 0;
+        audio_shake.addEventListener('ended',function() {
+                // Wait 500 milliseconds before next loop
+                setTimeout(function() {
+                        if (index < 1) {
+                            audio_shake.play();
+                            index++
+                        }
+                    },500);
+            },false);
+        audio_shake.play();
+    }
+    function autoPlayed() {
+        var audio = document.createElement("audio");
+        var index = 0;
+        audio.src = "mp3/skresult.mp3";
+        audio.addEventListener('ended',function() {// Wait 500 milliseconds before next loop
+            setTimeout(function() {
+                if (index < 0) {
+                    audio.play();
+                    index++
+                }
+            }, 0);
+        }, false);
+        audio.play();
+    }
+    function doResult() {
+        if (times > 0) {
+            return false;
+        }
+        autoPlay();
+        document.getElementById("result").className = "result";
+        document.getElementById("loading").className = "loading loading-show";
+        document.getElementById("hand").className = "hand hand-animate";
+        setTimeout(function() {
+            autoPlayed();
+        }, 2500);
+        setTimeout(function() {
+            times = 0;
+            document.getElementById("result").className = "result result-show";
+            document.getElementById("loading").className = "loading";
+            document.getElementById("hand").className = "hand";
+        }, 3000);
+    }
+    if(document.readyState=='complete')
+    {
+
+    }
+    </script>
+
+</body>
+</html>

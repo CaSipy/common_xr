@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>用户登录</title>
+
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+		<link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+		<!--当前项目样式引用-->
+		<link rel="stylesheet" href="http://static.huibaoming.cn/wap/src/css/wap.css">
+		
+		<link rel="stylesheet" type="text/css" href="../src/css/user.css"/>
+		<script type="text/javascript">
+			var json = {};
+		</script>
+
+	</head>
+
+	<body class="bg-wechat">
+		<!--<center class="login-marT">-->
+			<!--<img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="" style="width:30%;margin-top: 3rem;" class="sc-border u-radius4">-->
+		<!--</center>-->
+		<!--账号登录-->
+		<div ng-show="login_status">
+			<div class="weui-cells weui-cells_form mar-t6 width90" style=" margin:auto; margin-top: 4rem !important;">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label text-font4">账号</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input text-font4" type="text"  placeholder="请输入账号">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label text-font4">密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input text-font4" type="password"  placeholder="请输入密码">
+					</div>
+				</div>
+			</div>
+			<p class="weui-flex text-font2 width90 margin-auto">
+				<!--<span class="flex_item1 text-l mar-t2 pad-l2">？忘记密码</span>-->
+				<!--<span class="flex_item1 text-r mar-t2 pad-r2">没有账号？注册</span>-->
+			</p>
+			<a href="javascript:;" class="weui-btn weui-btn_primary width90 text-font4" style="margin: auto; margin-top: 2rem;">登录</a>
+			<div class="more" onclick="more()">更多</div>
+		</div>
+
+		<!--弹出框-->
+		<div >
+			<div class="weui-mask" id="iosMask"></div>
+			<div class="time_box" id="time_box">
+				<div class="login_item" ng-click="change_status()">手机登录</div>
+				<div class="login_item" ng-click="change_status()">账号登录</div>
+				<div class="login_item" id="register">用户注册</div>
+			</div>
+		</div>
+	</body>
+	<!--oss脚本接入-->
+	<script src="http://common.huibaoming.cn/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://static.huibaoming.cn/wap/src/js/user.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var $time_box = $('#time_box');
+		var $iosMask = $('#iosMask');
+		var $cancel = $('#cancel');
+		var $phone = $('#phone');
+		var $number = $('#number');
+		var $register = $('#register');
+		function more() {
+			$time_box.css('visibility','visible');
+			$iosMask.css('visibility','visible');
+			$time_box.css('opacity',1);
+			$iosMask.css('opacity',1);
+		}
+
+		$iosMask.click(function () {
+			$time_box.css('opacity',0);
+			$time_box.css('visibility','hidden');
+			$iosMask.css('opacity',0);
+			$iosMask.css('visibility','hidden');
+		});
+//		$cancel.click(function () {
+//			$iosMask.fadeOut();
+//			$time_box.css('opacity',0);
+//			$time_box.css('visibility','hidden');
+//		});
+
+
+		$scope.timeCancel=function(){
+			$iosMask.fadeOut();
+			$time_box.css('opacity',0);
+			$time_box.css('visibility','hidden');
+		}
+
+	</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>首页</title>
+		<link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="http://common.huibaoming.cn/font-awesome-4.7.0/css/font-awesome.css"/>
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+		<link rel="stylesheet" href="../src/css/wap.css">
+		<link rel="stylesheet" href="../src/css/wap_public.css">
+		<link rel="stylesheet" href="../src/css/home_xr.css">
+	</head>
+	<body ng-controller="ctrl">
+		<aside class="selMst_aside mar-b0 weui-flex bg-white">
+			<input type="text" class="selMA_input flex_item8" placeholder="搜索你想要的师傅" ng-model="find" />
+			<i class="icon-search selMA_i mar-l2 flex_item1 text-c" ng-click="search()"></i>
+		</aside>
+		<section class="mar-t3">
+			<div class="weui-panel__bd">
+				<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg bg-white mar-b2" ng-repeat="item in ser_json.items">
+					<div class="weui-media-box__hd sec_leftImg">
+						<img class="weui-media-box__thumb sec_leftImg" ng-src="{{item.imgUrl}}">
+					</div>
+					<div class="weui-media-box__bd">
+						<h4 class="weui-media-box__title" ng-bind="item.title">标题一</h4>
+						<p class="weui-media-box__desc" ng-bind="item.instructions">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+					</div>
+				</a>
+			</div>
+		</section>
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/angular/angular.js"></script>
+	<script src="../src/js/select.js" type="text/javascript" charset="utf-8"></script>
+</html>

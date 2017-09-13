@@ -1,0 +1,63 @@
+/*分类页面的样式*/
+	.classify_nav{
+	    max-width: 640px;
+	    width: 100%;
+	    z-index: 10001;
+	    overflow: hidden;
+	}
+	.classify_nav ul{
+	    position: relative;
+	    font-size: .14rem;
+	    color: #333;
+	    top: 0;
+	    white-space: nowrap;
+	    overflow-x: auto;
+	    overflow-y: hidden;
+	    z-index: 10010;
+	}
+	.classify_nav li{
+	    width:20%;
+	    height:2.2rem;
+	    line-height:2.2rem;
+	    list-style: none;
+	    display: inline-block;
+	    text-align:center;
+	    color:#1F1F1F;
+	    font-size:0.8rem;
+	}
+	.nav{
+		height: 2.8rem;
+		line-height:2.8rem;
+		text-align:center;
+	}
+	.nav_a_checked{
+		color: red !important;
+	}
+	.nav_li_checked{
+		color: rgba(255,153,0,1) !important;
+		border-bottom: .1rem solid red;
+	}
+	.section_header{
+		height: 11rem;
+		line-height: 11rem;
+		text-align: center;
+	}
+	.headerImg{
+		width: 6rem;
+		height: 6rem;
+		border: .3rem solid #FFFFFF;
+	}
+/*用户*/
+	.userImg{
+		width: 2.7rem !important;
+		height: 2.7rem !important;
+	}
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}

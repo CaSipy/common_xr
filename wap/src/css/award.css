@@ -1,0 +1,146 @@
+body{
+    /*background:white;*/
+    background:#7ac1c3;
+}
+.bg_bg{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+    /*background:url(http://common.huibaoming.cn/wap/images/haivit/bg.png);*/
+    background-size:cover;
+}
+.award_header{
+    width:60%;
+    margin:0 auto;
+    height: 2.5rem;
+    line-height:2rem;
+    color:white;
+    background:url(http://common.huibaoming.cn/wap/images/haivit/par.png) no-repeat center;
+    background-size:cover;
+}
+.award_item{
+    font-size:0.8rem;
+    /*border-radius:5px;*/
+    margin:0.5rem 1rem;
+    box-sizing: border-box;
+    color:white;
+    font-weight:bold;
+    /*width:95%;*/
+}
+.title{
+    background: linear-gradient(#FF6E00,#FFC600);
+
+}
+.list{
+    background:white;
+    color:#636363;
+}
+.award_list{
+    font-size:0.8rem;
+    margin-top:10rem;
+
+}
+.fix_header{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    overflow:hidden;
+    background:#7ac1c3;
+}
+/*优惠券详情页*/
+.coupon_msg{
+    width:100%;
+    position:relative;
+    background:white;
+    color:white;
+    overflow:hidden
+}
+.coupon_header{
+    padding:0.5rem;
+    border-bottom: 1.5px dashed white;
+
+}
+.coupon_header center{
+    padding:1rem 0 0.5rem 0
+}
+.coupon_header center .name{
+    font-size:1.5rem;
+}
+.coupon_ticket_collect{
+    margin:0.7rem 0 0 0;
+    font-size:0.7rem;
+    padding:0.3rem 1rem;
+    background:rgba(0,0,0,0.5);
+    text-align:center;
+    border-radius:5px;
+    display: inline-block;
+
+}
+.coupon_status{
+    margin:1rem 0;
+    text-align:center;
+}
+.coupon_status span{
+    padding:0.5rem 1rem;
+    border-radius:5px;
+    display:inline-block;
+    margin:0.3rem 0
+
+}
+.coupon_detail{
+    padding:0.5rem;
+    background:white;
+    margin-top:0.5rem;
+}
+.msg_title{
+    padding:0.5rem 0;
+    font-size:0.8rem;
+    border-bottom:1px solid #EEEDF2
+}
+.coupon_detail article{
+    padding:0.5rem 0;
+    font-size:0.75rem;
+}
+.coupon_detail article .weui-row{
+    padding:0.2rem 0;
+}
+/*代金券*/
+.cash_box{
+    width:85%;
+    margin:0.5rem auto;
+    /*border-top:0.15rem dotted #7ac1c3;*/
+    /*border:0.3rem solid white;*/
+    color:white;
+    font-family:"仿宋";
+    box-shadow:1px 1px 2px rgba(0,0,0,0.4);
+    border-radius:4px;
+}
+.tread{
+    width:50%;
+    height:3px;
+    margin:0.5rem auto;
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+}
+.tread_title{
+    height:1rem;
+    line-height:1rem;
+    margin-right:0.5rem;
+}
+.cash_footer{
+    border-top:1px dotted #F0EFF5;
+    padding:0.3rem 0.5rem;
+}
+.car1{
+    background: -webkit-linear-gradient(left,#F45C44,#E93248);
+}
+.car2{
+    background: -webkit-linear-gradient(left,#F09618,#FF532D);
+}
+.car3{
+    background: -webkit-linear-gradient(left,#3EB2E1,#5992FD);
+}

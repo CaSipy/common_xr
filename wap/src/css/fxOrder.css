@@ -1,0 +1,122 @@
+body{max-width:640px;background:rgb(245, 245, 245);}
+.bc-assist{background:#eeeeee;}
+hr{width:95%;color:#9c9c9c;margin:0 auto}
+header img{vertical-align: middle}
+h1,h2,h3,h4,h5{font-weight: 400;}
+.con{
+    margin-top:2.8rem;
+}
+.search{
+    width:100%;
+    height:2rem;
+    line-height:2rem;
+    background:#fff;
+}
+/*顶部导航*/
+.classify_nav{
+    max-width: 640px;
+    width: 100%;
+    z-index: 10001;
+    overflow: hidden;
+    border-bottom: 2px solid #e5e5e5;
+    position:fixed;
+    top:0;
+}
+.classify_nav ul{
+    position: relative;
+    font-size: .14rem;
+    color: #333;
+    top: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 10010;
+    background: #fafafa;
+}
+.classify_nav li{
+    width: 33.3%;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    color: #888;
+    font-size: .8rem;
+}
+.nav_li_checked {
+    color: #666;
+    background: #F1F1F1;
+}
+.pro_lists {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 30rem;
+}
+.pro_lists ul {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.pro_lists ul li {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    background: #ffffff;
+    border-bottom: 0.01rem solid #dedede;
+    margin-top: 10px;
+}
+.pro_lists ul li p.top_info {
+    width:100%;
+    font-size: 0.7rem;
+    color: #333333;
+    padding-bottom:0.5rem;
+    border-bottom:1px solid #008CD7;
+}
+.pro_lists ul li a.list_con {
+    display: block;
+    height: auto;
+    overflow: hidden;
+}
+.pro_lists ul li p.operate span{
+    word-wrap:break-word;
+}
+.pro_lists ul li p.operate span:first-child{
+    width:70%;
+}.pro_lists ul li p.operate span:last-child{
+     width:30%;
+     color: #008CD7;
+ }
+.pro_lists ul li .list_con .des_item {
+    width: 70%;
+    height: auto;
+    float: left;
+    overflow: hidden;
+    color: #333333;
+}
+.pro_lists ul li .list_con .price{
+    width:30%;
+    height:auto;
+    vertical-align: bottom;
+    color: #008CD7;
+}
+.pro_lists ul li .list_con .des_item p span {
+    float: right;
+    color: #008CD7;
+}
+/*--共用----------------------------------*/
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}
+.fix_containner{
+	margin-top: 4rem;
+}

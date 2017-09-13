@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+		<link rel="stylesheet" href="http://static.huibaoming.cn/wap/src/css/wap.css">
+		<link rel="stylesheet" type="text/css" href="http://static.huibaoming.cn/wap/src/css/wap_public.css"/>
+	    <link rel="stylesheet" href="../src/css/userOrder.css">
+	</head>
+	<body class="bg-wechat">
+		<div>
+			<!--导航栏-->
+			<header class="weui-navbar header-container">
+				<nav class="header-content weui-flex">
+					<a class="weui-navbar__item header-unchecked header-checked pad-all4 cancle" href="#tab1">
+						全部
+					</a>
+					<a class="weui-navbar__item header-unchecked pad-all4 cancle" href="#tab2">
+						已取消
+					</a>
+					<a class="weui-navbar__item header-unchecked pad-all4 cancle" href="#tab3">
+						未付款
+					</a>
+					<a class="weui-navbar__item header-unchecked pad-all4 cancle" href="#tab4">
+						派单中
+					</a>
+					<a class="weui-navbar__item header-unchecked pad-all4 cancle" href="#tab4">
+						已接单
+					</a>
+					<a class="weui-navbar__item header-unchecked pad-all4 cancle" href="#tab4">
+						服务中
+					</a>
+					<a class="weui-navbar__item header-unchecked pad-all4 cancle" href="#tab4">
+						已完成
+					</a>
+				</nav>
+			</header>
+			<!--没有订单-->
+			<aside id="nothing_order" class=" hide">
+				<div class="weui-msg" id="nothing">
+					<div class="obl-un mar-b5" id="nothing_un">
+						<div class="icon-list"></div>
+					</div>
+					<div class="weui-msg__text-area">
+						<h2 class="weui-msg__title">您还没有相关的订单</h2>
+						<p class="weui-msg__desc">去看看大家都在使用什么吧</p>
+					</div>
+				</div>
+			</aside>
+			<section class="section-pos" name="con">
+				
+				<!--一个article为一个订单-->
+				<article class="bg-white mar-b2" id="1">
+					<div class="order-top weui-flex">
+						<div style="width: 68%;" id="order_topL">
+							<div class="weui-cells mar-t0 cancle">
+							  <div class="weui-cell pad-t0 pad-b0 pad-r0">
+							      <p class="order-top text-font3" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">订单编号:TEST5900020170528102025263</p>
+							  </div>
+							</div>
+						</div>
+						<div class="flex_item1 text-r text-font2 pad-r3 sc-text-warning" id="order_topR">已结单，待支付</div>
+					</div>
+					<!--列表模块-->
+					<div class="weui-cells s-dow mar-t0 cancle">
+						<!---->
+						<div class="weui-cells weui-cells-access bg-garyf5" style="margin-top:0">
+							<a class="weui-cell weui-media-box weui-media-box_appmsg weui-media-box-trange main-header-c pad-t2 pad-b2" href="#">
+								<div class="weui-cell__bd weui-cell__hd flex_item3 pad-l4 pad-t1 pad-b1">
+									<p class="text-font3 text-family-hei text-astrict showLine-1 text-font5 sc-text-tab" ng-bind="item.deal_name">清洗空调</p>
+									<p class="text-font2 sc-text-tab mar-t1" >2031-32-32 12:12:12</p>
+								</div>
+								<div class="weui-cell__bd weui-cell__ft">
+									<p class="text-font3">￥<b>0</b></p>
+									<p class="text-font2 mar-t1">x<b>1</b></p>
+								</div>
+							</a>
+						</div>
+						<!---->
+						<!--<div class="weui-cell">
+							
+						</div>-->
+						<div class="weui-flex pad-t3 pad-b2 order-zj-borT">
+							<div class="weui-flex__item">
+								<div class="text-font4 text-weight3 pad-l4">￥1990.00</div>
+							</div>
+							<div class="weui-flex__item flex_item2 text-r pad-r1">
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">删除订单</a>-->
+								<a href="javascript:;" name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0" id="picker-name">取消订单</a>
+								<a href="javascript:;" class="weui-btn weui-btn_mini btn-t text-font2 bg-waring mar-t0">去支付</a>
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">已完成</a>-->
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<article class="bg-white mar-b2" id="1">
+					<div class="order-top weui-flex">
+						<div class="weui-flex__item flex_item3" id="order_topL">
+							<div class="weui-cells mar-t0 cancle">
+							  <div class="weui-cell">
+							    <div class="weui-cell__bd">
+							      <p class="text-font3">订单编号：<b>12312312312</b></p>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="weui-flex__item text-r text-font2 pad-r3 sc-text-warning" id="order_topR">已付款/已接单</div>
+					</div>
+					<!--列表模块-->
+					<div class="weui-cells s-dow mar-t0 cancle">
+						<!---->
+						<div class="weui-cells weui-cells-access bg-garyf5" style="margin-top:0">
+							<a class="weui-cell weui-media-box weui-media-box_appmsg weui-media-box-trange main-header-c pad-t2 pad-b2" href="#">
+								<div class="weui-cell__bd weui-cell__hd flex_item3 pad-l4 pad-t1 pad-b1">
+									<p class="text-font3 text-family-hei text-astrict showLine-1 text-font5 sc-text-tab">清洗空调</p>
+									<p class="text-font2 sc-text-tab mar-t1">服务时间：2031-32-32 12:12:12</p>
+								</div>
+								<div class="weui-cell__bd weui-cell__ft">
+									<p class="text-font3">￥<b>0</b></p>
+									<p class="text-font2 mar-t1">x<b>1</b></p>
+								</div>
+							</a>
+						</div>
+						<!---->
+						<!--<div class="weui-cell">
+							
+						</div>-->
+						<div class="weui-flex pad-t3 pad-b2 order-zj-borT">
+							<div class="weui-flex__item">
+								<div class="text-font4 text-weight3 pad-l4">￥1990.00</div>
+							</div>
+							<div class="weui-flex__item flex_item2 text-r pad-r1">
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">删除订单</a>-->
+								<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">取消订单</a>
+								<!--<a href="wait-pay.html" class="weui-btn weui-btn_mini btn-t text-font2 bg-waring mar-t0">去支付</a>-->
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">已完成</a>-->
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<article class="bg-white mar-b2" id="1">
+					<div class="order-top weui-flex">
+						<div class="weui-flex__item flex_item3" id="order_topL">
+							<div class="weui-cells mar-t0 cancle">
+							  <div class="weui-cell">
+							    <div class="weui-cell__bd">
+							      <p class="text-font3">订单编号：<b>12312312312</b></p>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="weui-flex__item text-r text-font2 pad-r3 sc-text-warning" id="order_topR">服务中</div>
+					</div>
+					<!--列表模块-->
+					<div class="weui-cells s-dow mar-t0 cancle">
+						<!---->
+						<div class="weui-cells weui-cells-access bg-garyf5" style="margin-top:0">
+							<a class="weui-cell weui-media-box weui-media-box_appmsg weui-media-box-trange main-header-c pad-t2 pad-b2" href="#">
+								<div class="weui-cell__bd weui-cell__hd flex_item3 pad-l4 pad-t1 pad-b1">
+									<p class="text-font3 text-family-hei text-astrict showLine-1 text-font5 sc-text-tab">清洗空调</p>
+									<p class="text-font2 sc-text-tab mar-t1">服务时间：2031-32-32 12:12:12</p>
+								</div>
+								<div class="weui-cell__bd weui-cell__ft">
+									<p class="text-font3">￥<b>0</b></p>
+									<p class="text-font2 mar-t1">x<b>1</b></p>
+								</div>
+							</a>
+						</div>
+						<!---->
+						<!--<div class="weui-cell">
+							
+						</div>-->
+						<div class="weui-flex pad-t3 pad-b2 order-zj-borT">
+							<div class="weui-flex__item">
+								<div class="text-font4 text-weight3 pad-l4">￥1990.00</div>
+								<div class="text-font2 sc-text-tab pad-l4">增值服务：￥120</div>
+							</div>
+							<div class="weui-flex__item flex_item2 text-r pad-r1">
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">删除订单</a>-->
+								<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">确认完成</a>
+								<!--<a href="wait-pay.html" class="weui-btn weui-btn_mini btn-t text-font2 bg-waring mar-t0">去支付</a>-->
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">完成订单</a>-->
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<article class="bg-white mar-b2" id="1">
+					<div class="order-top weui-flex">
+						<div class="weui-flex__item flex_item3" id="order_topL">
+							<div class="weui-cells mar-t0 cancle">
+							  <div class="weui-cell">
+							    <div class="weui-cell__bd">
+							      <p class="text-font3">订单编号：<b>12312312312</b></p>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="weui-flex__item text-r text-font2 pad-r3 sc-text-warning" id="order_topR">已完成</div>
+					</div>
+					<!--列表模块-->
+					<div class="weui-cells s-dow mar-t0 cancle">
+						<!---->
+						<div class="weui-cells weui-cells-access bg-garyf5" style="margin-top:0">
+							<a class="weui-cell weui-media-box weui-media-box_appmsg weui-media-box-trange main-header-c pad-t2 pad-b2" href="#">
+								<div class="weui-cell__bd weui-cell__hd flex_item3 pad-l4 pad-t1 pad-b1">
+									<p class="text-font3 text-family-hei text-astrict showLine-1 text-font5 sc-text-tab">清洗空调</p>
+									<p class="text-font2 sc-text-tab mar-t1">服务时间：2031-32-32 12:12:12</p>
+								</div>
+								<div class="weui-cell__bd weui-cell__ft">
+									<p class="text-font3">￥<b>0</b></p>
+									<p class="text-font2 mar-t1">x<b>1</b></p>
+								</div>
+							</a>
+						</div>
+						<!---->
+						<!--<div class="weui-cell">
+							
+						</div>-->
+						<div class="weui-flex pad-t3 pad-b2 order-zj-borT">
+							<div class="weui-flex__item">
+								<div class="text-font4 text-weight3 pad-l4">￥1990.00</div>
+								<div class="text-font2 sc-text-tab pad-l4">增值服务：￥120</div>
+							</div>
+							<div class="weui-flex__item flex_item2 text-r pad-r1">
+								
+								<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">申请售后</a>
+								<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">评价师傅</a>
+								<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">删除订单</a>
+									
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">确认完成</a>-->
+								<!--<a href="wait-pay.html" class="weui-btn weui-btn_mini btn-t text-font2 bg-waring mar-t0">去支付</a>-->
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">完成订单</a>-->
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<article class="bg-white mar-b2" id="1">
+					<div class="order-top weui-flex">
+						<div class="weui-flex__item flex_item3" id="order_topL">
+							<div class="weui-cells mar-t0 cancle">
+							  <div class="weui-cell">
+							    <div class="weui-cell__bd">
+							      <p class="text-font3">订单编号：<b>12312312312</b></p>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="weui-flex__item text-r text-font2 pad-r3 sc-text-warning" id="order_topR">已关闭</div>
+					</div>
+					<!--列表模块-->
+					<div class="weui-cells s-dow mar-t0 cancle">
+						<!---->
+						<div class="weui-cells weui-cells-access bg-garyf5" style="margin-top:0">
+							<a class="weui-cell weui-media-box weui-media-box_appmsg weui-media-box-trange main-header-c pad-t2 pad-b2" href="#">
+								<div class="weui-cell__bd weui-cell__hd flex_item3 pad-l4 pad-t1 pad-b1">
+									<p class="text-font3 text-family-hei text-astrict showLine-1 text-font5 sc-text-tab">清洗空调</p>
+									<p class="text-font2 sc-text-tab mar-t1">服务时间：2031-32-32 12:12:12</p>
+								</div>
+								<div class="weui-cell__bd weui-cell__ft">
+									<p class="text-font3">￥<b>0</b></p>
+									<p class="text-font2 mar-t1">x<b>1</b></p>
+								</div>
+							</a>
+						</div>
+						<!---->
+						<!--<div class="weui-cell">
+							
+						</div>-->
+						<div class="weui-flex pad-t3 pad-b2 order-zj-borT">
+							<div class="weui-flex__item">
+								<div class="text-font4 text-weight3 pad-l4">￥1990.00</div>
+							</div>
+							<div class="weui-flex__item flex_item3 text-r pad-r1">
+								<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">删除订单</a>
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">确认完成</a>-->
+								<!--<a href="wait-pay.html" class="weui-btn weui-btn_mini btn-t text-font2 bg-waring mar-t0">去支付</a>-->
+								<!--<a name="Cancel" class="weui-btn weui-btn_default weui-btn_mini text-font2 mar-r2 mar-t0">完成订单</a>-->
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+			<!--取消弹出框-->
+				<div>
+				    <div class="weui-mask1" id="iosMask" style="display:none;"></div>
+				    
+				    <div class="time_box" id="time_box">
+				    	
+				        <div id="picker-container">
+				            <div class="time-border">
+				            	<header>请输入取消理由</header>
+				            	<textarea class="weui-input mar-t2" id="inline" type="text" value="" style="height: 5rem; padding: 0 .2rem;">
+				            	
+				            </div>
+				        </div>
+				        <div class="weui-flex bg-white text-c">
+				            <div class="weui-flex__item time-cancel-btn" id="cancel">取消</div>
+				            <div class="weui-flex__item time-sure-btn"  id="sure">确认</div>
+				        </div>
+				    </div>
+				    
+				</div>
+			<!--底部导航栏-->
+		    <footer class="weui-tabbar" id="footer">
+		        <div class="weui-tabbar">
+		            <a  class="weui-tabbar__item">
+		                <!--<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>-->
+		                <div class="weui-tabbar__icon weui-tar__img">
+		                    <img src="http://common.huibaoming.cn/wap/images/icon/home1.png" alt="">
+		                </div>
+		                <p class="weui-tabbar__label text-font2">首页</p>
+		            </a>
+		            <a  class="weui-tabbar__item ">
+		                <div class="weui-tabbar__icon weui-tar__img">
+		                    <img src="http://common.huibaoming.cn/wap/images/icon/classify.png" alt="">
+		                </div>
+		                <p class="weui-tabbar__label text-font2">分类</p>
+		            </a>
+		            <a class="weui-tabbar__item  weui-bar__item--on">
+		                <div class="weui-tabbar__icon weui-tar__img">
+		                    <img src="http://common.huibaoming.cn/wap/images/icon/search.png" alt="">
+		                </div>
+		                <p class="weui-tabbar__label text-font2 sc-text-blue sc-text-blue">订单</p>
+		            </a>
+		            <a  class="weui-tabbar__item">
+		                <div class="weui-tabbar__icon weui-tar__img">
+		                    <img src="http://common.huibaoming.cn/wap/images/icon/user.png" alt="">
+		                </div>
+		                <p class="weui-tabbar__label text-font2">我</p>
+		            </a>
+		        </div>
+		    </footer>
+		</div>
+	</body>
+</html>
+<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+<script src="http://common.huibaoming.cn/jquery-weui/js/city-picker.js"></script>
+<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+<script src="../src/src/js/Order.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$('nav.header-content a').each(function(){
+        $(this).click(function(){
+            var base=$(this).data('base');
+            $(this).addClass('header-checked').siblings().removeClass('header-checked');
+            $('#'+base).removeClass('hide').siblings("article").addClass('hide');
+
+
+        });
+    });
+	var data=['信息填错了', '按错了', '不想订了', '不需要服务了'];
+	$("#inline").picker({
+		container: '#picker-container',
+		title: "请选择您取消的理由",
+		cols: [{
+			textAlign: 'center',
+			values: data
+		}]
+	});
+	var $time_box = $('#time_box');
+    var $iosMask = $('#iosMask');
+    var $cancel = $('#cancel');
+    var $sure = $('#sure');
+    $('#picker-name').click(function () {
+        $iosMask.fadeIn();
+        $time_box.css('visibility','visible');
+        $time_box.css('opacity',1);
+    });
+    $iosMask.click(function () {
+        $iosMask.fadeOut();
+        $time_box.css('opacity',0);
+        $time_box.css('visibility','hidden');
+	});
+	$cancel.click(function () {
+	    $iosMask.fadeOut();
+	    $time_box.css('opacity',0);
+	    $time_box.css('visibility','hidden');
+	});
+	$sure.click(function () {
+	    $iosMask.fadeOut();
+	    $time_box.css('opacity',0);
+	    $time_box.css('visibility','hidden');
+	    console.log($("#inline").val());
+	});
+</script>

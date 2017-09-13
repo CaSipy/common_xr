@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>个人中心</title>
+    <!--oss库资源引用-->
+    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+    <link rel="stylesheet" href="http://static.huibaoming.cn/wap/src/css/wap.css">
+    <link rel="stylesheet" href="http://static.huibaoming.cn/wap/src/css/wap_public.css">
+    <link rel="stylesheet" href="http://static.huibaoming.cn/wap/src/css/userCenter.css">
+</head>
+<body ng-app="app" ng-controller="ctrl">
+<div class="containner">
+    <!--头部一-->
+    <div class="header-container header-bg text-font4">
+        <div class="weui-row" style="padding:20px 0 10px 0">
+            <div class="weui-col-33 text-c" style="border-right:1px solid #eeeeee">
+                <img src="{{ user_url }}" alt="" class="border-rd border-frame1" style="width:70%;">
+                <p class="text-color pad" ng-bind="username"></p>
+            </div>
+            <div class="weui-col-66">
+                <p class="text-color pad-b3"><b>尊敬的钻石会员，欢迎回来</b></p>
+                <div class="weui-flex">
+                    <div style="width:30%" >
+                        <p class="text-color pad two-align">累计奖金</p>
+                        <p class="text-color pad two-align" >金币</p>
+                        <p class="text-color pad two-align">元宝</p>
+                    </div>
+                    <div class="weui-flex__item">
+                        <p class="text-color pad" ng-bind="':'+reward"></p>
+                        <p class="text-color pad" ng-bind="':'+gold"></p>
+                        <p class="text-color pad" ng-bind="':'+ingot"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-row">
+            <div class="weui-col-33 text-r bc-text-header">每日提醒：</div>
+            <div class="weui-col-66">
+                <p ng-bind="'元宝流失'+lost_selver"></p>
+                <p ng-bind="'元宝流失'+lost_ingot"></p>
+            </div>
+        </div>
+        <!--<div class="text-c bc-text-header pad-all2">每日提醒： </div>-->
+        <div class="weui-row btn-bg">
+            <div class="weui-col-50 text-c text-header-color pad border-opa" ><span class="icon-th-large mar-r1 sc-text-wechat text-font2"></span><sapn>购买的订单</sapn></div>
+            <div class="weui-col-50 text-c text-header-color pad border-opa"><span class="icon-th-large mar-r1 sc-text-wechat"></span>出售的订单</div>
+        </div>
+    </div>
+</div>
+<!--主体内容-->
+<div class="weui-cells text-font3" style="margin-top:0">
+    <div class="weui-cell weui-cell_access">
+        <div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/icon/picture.png" style="width:20px"></div>
+        <div class="weui-cell__bd">
+            <p>我的二维码</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </div>
+    <div class="weui-cell weui-cell_access">
+        <div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/icon/picture.png" style="width:20px"></div>
+        <div class="weui-cell__bd">
+            <p>我的理财</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </div>
+    <div class="weui-cell weui-cell_access">
+        <div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/icon/picture.png" style="width:20px"></div>
+        <div class="weui-cell__bd">
+            <p>我的团队</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </div>
+    <div class="weui-cell weui-cell_access">
+        <div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/icon/picture.png" style="width:20px"></div>
+        <div class="weui-cell__bd">
+            <p>钱包</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </div>
+    <div class="weui-cell weui-cell_access">
+        <div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/icon/picture.png" style="width:20px"></div>
+        <div class="weui-cell__bd">
+            <p>地址管理</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </div>
+    <div class="weui-cell weui-cell_access">
+        <div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/icon/picture.png" style="width:20px"></div>
+        <div class="weui-cell__bd">
+            <p>红包互助游戏</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </div>
+</div>
+
+<!--按钮-->
+<div style="width:auto;margin:30px 15px">
+    <div class="weui-btn weui-btn_primary ">退出登录</div>
+</div>
+
+</div>
+<!--底部导航栏-->
+<div class="weui-tabbar">
+    <div class="weui-tabbar">
+        <a href="ticker.html" class="weui-tabbar__item">
+            <!--<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>-->
+            <div class="weui-tabbar__icon weui-tar__img">
+                <img src="http://common.huibaoming.cn/wap/images/icon/home.png" alt="">
+            </div>
+            <p class="weui-tabbar__label text-font2">首页</p>
+        </a>
+        <a href="goods.html" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon weui-tar__img">
+                <img src="http://common.huibaoming.cn/wap/images/icon/classify.png" alt="">
+            </div>
+            <p class="weui-tabbar__label text-font2">分类</p>
+        </a>
+        <a href="goods.html" class="weui-tabbar__item">
+            <!--<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>-->
+            <div class="weui-tabbar__icon weui-tar__img">
+                <img src="http://common.huibaoming.cn/wap/images/icon/search.png" alt="">
+            </div>
+            <p class="weui-tabbar__label text-font2">发现</p>
+        </a>
+        <a href="#tab4" class="weui-tabbar__item weui-bar__item--on">
+            <div class="weui-tabbar__icon weui-tar__img">
+                <img src="http://common.huibaoming.cn/wap/images/icon/user1.png" alt="">
+            </div>
+            <p class="weui-tabbar__label text-font2">我</p>
+        </a>
+    </div>
+</div>
+</body>
+<script src="http://common.huibaoming.cn/angular/angular.js"></script>
+<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+<script src="http://static.huibaoming.cn/wap/src/js/userCenter.js"></script>
+</html>

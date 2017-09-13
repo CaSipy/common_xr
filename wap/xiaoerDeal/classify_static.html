@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="body-hid">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>商品列表</title>
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+	    <link rel="stylesheet" type="text/css" href="http://static.huibaoming.cn/wap/src/css/wap_public.css"/>
+		<link rel="stylesheet" href="http://static.huibaoming.cn/wap/src/css/wap.css">
+	    <link rel="stylesheet" href="../src/css/deal.css">
+	</head>
+	<body class="body-hid">
+		<!--头部-->
+		<header class="back-header weui-flex bg-white header_bBor">
+			<span class="back-header-icon icon-chevron-left flex_item1 sc-text-blue" onclick="javascript:window.history.go(-1);"></span>
+			<h1 class="back-header-h1 flex_item4 sc-text-blue">家电维修</h1>
+			<a class="flex_item1 header-right sc-text-blue"></a>
+		</header>
+		<section class="weui-flex deal_section fix_containner mar-b0" style="height: 85%;">
+			<nav class="flex_item1 deal_nav">
+				<a href="#tab1" class="deal_nav_active" onclick="aSkip(this)">家电维修</a>
+				<a href="#tab2" onclick="aSkip(this)">家政服务</a>
+				<a href="#tab3" onclick="aSkip(this)">农特产品</a>
+				<a href="#tab4" onclick="aSkip(this)">外卖服务</a>
+			</nav>
+			<article class="flex_item3 bg-white deal_article" id="deal_article">
+				<div id="tab1">
+					<figure class="weui-grids">
+						<header class="article_header">
+							安装
+						</header>
+						<a href="#" class="weui-grid js_grid cancle open-popup" onclick="showDetail()">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								Button
+							</p>
+						</a>
+						<a href="#" class="weui-grid js_grid cancle open-popup" onclick="showDetail()">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+					</figure>
+				</div>
+				<div id="tab2">
+					<figure class="weui-grids">
+						<header class="article_header">
+							保洁
+						</header>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								Button
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+					</figure>
+					<figure class="weui-grids type" style="">
+						<header class="article_header">
+							清洗
+						</header>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								Button
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+					</figure>
+					<figure class="weui-grids type">
+						<header class="article_header">
+							清洗
+						</header>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								Button
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+						<a href="" class="weui-grid js_grid cancle">
+							<div class="weui-grid__icon lit_img">
+								<img src="http://img03.hc360.com/bm/201411/201411041555567791.jpg" class="u-radius" alt="">
+							</div>
+							<p class="weui-grid__label">
+								List
+							</p>
+						</a>
+					</figure>
+				</div>
+				<div id="tab3" class="text-c">敬请期待</div>
+				<div id="tab4" class="text-c">敬请期待</div>
+			</article>
+		</section>
+		<!--弹出层-->
+		<!--商品详情-->
+		<section id="popup_detail" class="weui-popup__container" style="top: 2.5rem;">
+			<!--<div class="weui-popup__overlay"></div>-->
+  			<div class="weui-popup__modal">
+				<header>
+					<img src="../../../oss/wap/images/xr/header_detail.jpg" style="width: 100%; height: 6.5rem;"/>
+				</header>
+				<div class="detail_section">
+					<article class="detail_article">
+						<header class="detail_header">服务介绍</header>
+						
+						<table class="detail_table" >
+							<tr style="background: #008CD7;">
+								<th>清洗项目</th>
+								<th>数量</th>
+								<th>原价</th>
+								<th>特价</th>
+							</tr>
+							<tr>
+								<td>空调挂机</td>
+								<td>1</td>
+								<td>98</td>
+								<td>98</td>
+							</tr>
+						</table>
+						<aside class="detail_aside">
+							<img src="../../../oss/wap/images/xr/imgt5.jpg"/>
+							<p>
+								疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库
+								疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库
+								疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库
+								疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库
+								疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库
+								疯了似的咖啡碱哦i圣诞节反抗类毒素解放分厘卡电视机反抗类毒素解放开绿灯数据库
+							</p>
+						</aside>
+					</article>
+					<!--服务时长-->
+					<article>
+						<header class="header_mar">
+							<div class="detail_header">服务时长</div>
+						</header>
+						<div class="header_mar bg-white text-font2" style="padding-left: 1.7rem;">45分钟/台</div>
+					</article>
+					<!--清洗流程-->
+					<article>
+						<header class="header_mar">
+							<div class="detail_header">清洗流程</div>
+						</header>
+						<div class="header_mar bg-white text-font2" style="padding-left: 1.7rem;">
+							<ui class="wash_ui">
+								<li>验机</li>
+								<li>准备工具、做环境防护</li>
+								<li>拆卸外壳、做电路防护</li>
+								<li>多功能清洗机进行深度清洗</li>
+								<li>清洗外壳部件</li>
+								<li>机器安装还原</li>
+								<li>试机、清理现场</li>
+							</ui>
+						</div>
+					</article>
+					<!--服务保养工具-->
+					<article>
+						<header class="header_mar">
+							<div class="detail_header">清洗流程</div>
+						</header>
+						<div class="header_mar bg-white text-font2" style="padding-left: 1.7rem;">
+							<ui class="wash_ui">
+								<li>十分到家家庭环境防护套装</li>
+								<li>多功能高压清洗机</li>
+								<li>空调专用清洗保护罩</li>
+							</ui>
+						</div>
+					</article>
+					<a href="javascript:;" class="weui-btn weui-btn_primary detail_btn bg-qblue">立即下单</a>
+					<a href="javascript:;" class="weui-btn weui-btn_default close-popup detail_btn" style="margin-bottom: 1rem;">关闭</a>
+				</div>
+			</div>
+		</section>
+		
+		<!--底部导航栏-->
+	    <footer class="weui-tabbar" id="footer">
+	        <div class="weui-tabbar">
+	            <a  class="weui-tabbar__item">
+	                <!--<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>-->
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/xr/icon_home.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2">首页</p>
+	            </a>
+	            <a  class="weui-tabbar__item weui-bar__item--on">
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/xr/icon_classify1.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2 sc-text-blue">分类</p>
+	            </a>
+	            <a class="weui-tabbar__item ">
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/xr/icon_deal.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2">订单</p>
+	            </a>
+	            <a  class="weui-tabbar__item">
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/xr/icon_user.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2">我</p>
+	            </a>
+	        </div>
+	    </footer>
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="../src/js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/city-picker.js"></script>
+	<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+	<script type="text/javascript">
+	$(".deal_article").focus();
+	var type = ["tab1", "tab2", "tab3","tab4"];
+	var ff = 0;
+	var timeId, timeId2;
+//	timeId = window.setTimeout("skipHref()", 1000);
+		function skipHref() {
+		    if (ff == 1) {
+		    	clearTimeout(timeId);
+		    } else {
+		        $.each(type, function (i) {
+		            if ($("#" + type[i]).offset().top < $(window).height() * 0.11) {
+		            	
+		                $(".deal_nav a").removeClass("deal_nav_active");
+		                $(".deal_nav a").removeClass("deal_nav_active");
+		                $("a[href=#" + type[i] + "]").addClass("deal_nav_active");
+		                var text = $("a[href=#" + type[i] + "]").text();
+		                $("h1").text(text);
+		            }
+		
+		        });
+		        timeId = window.setTimeout("skipHref()", 200);
+		    }
+		
+		    $(".deal_article").focus();
+			console.log("move2");
+			clearInterval(timeId);
+			clearInterval(timeId2);
+		}
+		
+		var j = 0, posL = [], posO = {};
+		function aSkip(key) {
+		    clearTimeout(timeId);
+		    ff = 1;
+		    timeId2 = window.setTimeout("isStop()", 200);
+		    $(".deal_nav a").removeClass("deal_nav_active");
+		    $(".deal_nav a").removeClass("deal_nav_active");
+		    var text = $(key).text();
+		    $("h1").text(text);
+		    $(key).addClass("deal_nav_active");	
+		    console.log("move1");
+		};
+		function isStop() {
+		    //alert($(".all_list").is(":animated"))
+		    if ($(".deal_article").is(":animated")) {
+		        ff = 1;
+		        timeId2 = window.setTimeout("isStop()", 200);
+		        console.log("move");
+		    } else {
+		        ff = 0;
+		        clearTimeout(timeId2);
+				console.log("Stop");
+		    }
+		}
+//		jq判断滚动
+		$("#deal_article").on("scroll", function () {
+		    if (ff == 0) {
+		        console.log("?");
+		        timeId = window.setTimeout("skipHref()", 200);
+		    } else {
+		        clearTimeout(timeId);
+		        console.log("??");
+		    }
+		
+		});
+//		弹出层
+		var pop=true;
+		function showPop(obj){
+			if($("#popup").css("display")=='none'){
+				$("#popup").popup();
+				$(".weui-popup__overlay").css("opacity",1);
+				pop=false;
+				console.log(pop);
+			}else{
+				$.closePopup();
+				pop=true;
+				$(".weui-popup__overlay").css("opacity",0);
+				console.log(pop);
+			}
+		}
+		function closePop(obj){
+			$.closePopup();
+		}
+		//加的效果
+		$('.add').bind("click", function(event) {
+			event.stopPropagation();
+			var n = $(this).prev().val();
+			var num = parseInt(n) + 1;
+			if(num == 0) {
+				return;
+			}
+			$(this).prev().val(num);
+			$(this).parents("div[name='editor']").siblings("div[name='accomplish']").find("b[name='list_num']").html(num);
+		});
+		//减的效果
+		$('.jian').bind("click", function(event) {
+			event.stopPropagation();
+			var n = $(this).next().val();
+			var num = parseInt(n) - 1;
+			if(num == 0) {
+				return
+			}
+			$(this).next().val(num);
+		});
+		function showDetail(){
+			$("#popup_detail").popup();
+		}
+//		清空购物车
+		function clearCar(){
+			//如果参数过多，建议通过 object 方式传入
+			$.confirm({
+				title: '清空列表',
+				text: '您确定要清空购物车么',
+				onOK: function() {
+					$(".pop_ul").children('li').remove();
+					$.closePopup();
+				},
+				onCancel: function() {
+					return;
+				}
+			});	
+		}
+		
+	</script>
+</html>

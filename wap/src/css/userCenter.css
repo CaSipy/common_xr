@@ -1,0 +1,192 @@
+﻿
+input[type=text]{
+    border:none;
+    outline:none
+}
+.main-header{
+    width:auto;
+    height:30px;
+    padding:5px 10px;
+    background:#F7F7F7;
+}
+.main-header-c{
+    background:#F7F7F7;
+}
+.header-container{
+    width:auto;
+    min-height:5em;
+}
+.header-container p{
+    padding:0;
+    line-height:1.5;
+    color:white;
+}
+.border-rd{
+    border-radius:5em;
+}
+.border-frame5{
+    border:5px solid #7ACCE3;
+}
+.border-frame1{
+    border:1px solid white;
+}
+.border-r{
+    border-right:1px solid black
+}
+.weui-flex__item1{
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+    flex: 3;
+}
+.weui-col-bottom{
+    border-bottom:1px solid #FF5B00;
+    color:#FF5B00
+}
+.pad{
+    padding:10px 0;
+}
+.pad-all{
+    padding:10px
+}
+.ative-c{
+    color:#FF5B00
+}
+.s-dow{
+    box-shadow: 1px 1px 2px #888888;
+}
+.blk{
+    display:block
+}
+/*---------------各个页面单用---------------*/
+.weui_grid_icon img{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.weui_grid_icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto
+}
+.btn-t{
+    margin-top:0 !important;
+}
+.pad-r{
+    padding-right:15px
+}
+.active-bgc{
+    background:#FF5B00 !important;
+    color:white
+}
+.weui-media-box-trange{
+    -webkit-box-align: initial;
+    -webkit-align-items: initial;
+    align-items: initial;
+}
+/*头部页面*/
+.header-bg{
+    background:url('http://common.huibaoming.cn/wap/images/header_bg.jpg') no-repeat center;
+    background-size:cover;
+}
+.pad-tb{
+    padding:20px 10px
+}
+.text-let{
+    letter-spacing:2px;
+}
+.text-header-color{
+    color:rgba(205,205,205,0.9)
+}
+.btn-bg{
+    background:rgba(0,0,0,0.3);
+}
+.border-opa{
+    border-right:1px solid rgba(205,205,205,0.6)
+}
+  .list-title{padding:5px 10px;font-size:14px;border-bottom:1px solid #eeeeee;}
+   .order-list{padding:5px 10px;}
+   .order-list img{width:30%;}
+   .order-list p{font-size:12px;color:#999;}
+   .company{font-size:12px;position:fixed;left:0;bottom:80px;width:100%;color:rgba(0,0,0,0.2);text-align:center;}
+   /*文字两边对齐*/
+   .two-align1{
+       text-align:justify;
+       text-align-last:justify;
+       line-height:0;
+   }
+  /*------------------------------------*/
+ .text-font-p{
+	font-size: 0.9rem;
+}
+.userHLeft{
+	border-right: 1px solid #D7D7D7;
+	padding: 0 .8rem;
+}
+.userHImg{
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+}
+.userHbtn{
+	border: 1px solid white;
+	color: white;
+	border-radius: .5rem;
+	font-size: .75rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+}
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}
+.weui-tabbar__item.weui-bar__item--on .weui-tabbar__label{
+	color: #008CD7 !important;
+}
+/*平台说明*/
+.agreement_name{
+    width:100%;
+    padding:0.8rem;
+    box-sizing: border-box;
+    border-bottom:1px solid #d9d9d9
+}
+.active{
+    color:#008CD7;
+}
+.agr_title{
+    width:100%;
+    padding:0.7rem;
+    box-sizing: border-box;
+
+}
+.agr_title h4{
+    width: 6rem;
+    height:1.5rem;
+    background:#008CD7;
+    font-size:0.6rem;
+    line-height:1.5rem;
+    color:white;
+    padding-left:0.5rem;
+    margin:0.7rem 0;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.agr_title p{
+    font-size:0.8rem;
+    color:#3C3C3C;
+}
+
+/*--第二版本-------------------------------------------------------------*/
+.nav_bot{
+	box-shadow: 0px 2px 16px rgba(0,0,0,.2);
+}
+.nav_icon{
+	width:20%;
+}
+.nav_icon:before{
+	border-right: 0 !important;
+}

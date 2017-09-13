@@ -1,0 +1,48 @@
+﻿.back-header{
+	position: fixed;
+	left:0;
+	top:0;
+	right:0;
+	z-index:100;
+	text-align: center;
+	background:white;
+	height: 2.5rem;
+	border-bottom: 1px solid #F0EFF5;
+	z-index:1000;
+}
+.back-header-h1{
+	line-height: 2.5rem;
+	font-size: .9rem;
+	font-weight: 600;
+}
+.back-header-icon{
+	height: 2.5rem;
+	font-size: .8rem;
+	line-height: 2.5rem;
+}
+.icon-chevron-left:before{
+	margin-right: .1rem;
+}
+.header-right{
+	height: 2.5rem;
+	line-height: 2.5rem;
+	font-size: .8rem;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+/*底部导航显示图标用的*/
+.weui-tar__img {
+	display: inline-block;
+	width: 1.3rem;
+	height: 1.3rem;
+}
+.fix_containner{
+	margin-top:2.5rem;
+	margin-bottom:3rem;
+}
+.theme_bg{
+	background:#7ac1c3 !important;
+}
+.theme_sc{
+	color:#7ac1c3 !important;
+}

@@ -1,0 +1,120 @@
+b{
+	font-weight: normal;
+}
+.selMst_aside{
+	padding: .7rem 5% ;
+}
+.selMA_input{
+	height: 2rem;
+	border: 1px solid #BCBCBC;
+	box-shadow: 2px 3px 20px rgba(0,0,0,.1);
+	padding-left: .3rem;
+	box-sizing: border-box;
+}
+.selMA_i{
+	font-size: 1.5rem;
+	height: 2rem;
+	line-height: 2rem;
+	display: inline-block;
+	color: #666666;
+}
+.flex_item8{
+	-webkit-box-flex: 8;
+	    -webkit-flex: 8;
+	    flex: 8
+}
+.selMA_img{
+	width: 5rem !important;
+	height: 5rem !important;
+}
+.weui-cell_access .weui-cell__ft:after{
+	width: .5rem;
+	height: .5rem;
+}
+.selMA_footer{
+	padding: .7rem 10%;
+	position: fixed;
+	bottom: 0;
+	width: 80%;
+}
+.selMA_btn{
+	background: #008CD7;
+	width: 100%;
+	margin: 0 auto;
+	
+	
+}
+/*-师傅详细信息---------------------------------*/
+.master_art{
+	background: linear-gradient(#398BFF,#00BBFF);
+	/*background: #00BBFF;*/
+	height: 15rem;
+	padding: 1.2rem 0;
+}
+.master_artImg{
+	width:6rem;
+	height: 6rem;
+}
+.master_artH1{
+	font-size: 1.1rem;
+}
+.master_artP{
+	font-size: 1rem;
+}
+.mas_star{
+	font-size: 1.6rem;
+	color: #BCBCBC;
+	margin: 0 .1rem;
+}
+.mas_star_active{
+	color: #FFCB63;
+}
+.master_btn{
+	width: 46%;
+	margin: .6rem auto 0;
+	height: 2rem;
+	line-height: 2rem;
+	color: #00BBFF;
+}
+.mas_secHeader{
+	font-size: 1.1rem;
+	border-bottom: 2px solid #D7D7D7;
+	text-align: justify;
+	text-align-last:justify;
+}
+.mas_secP{
+	width: 100%;
+	display: block;
+}
+.mas_secSpan{
+	text-align: justify;
+	width: 30%;
+	display: inline-block;
+}
+.mas_bor{
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7p;
+}
+.mas_cerImg{
+	width: 30px !important;
+	height: 30px !important;
+}
+.mas_artLast{
+	padding: .5rem 5%;
+}
+.mas_figure{
+	border: 1px solid #D7D7D7;
+	padding: .4rem;
+	display: inline-block;
+	margin-left: .3rem;
+	margin-bottom: .5rem;
+}
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}

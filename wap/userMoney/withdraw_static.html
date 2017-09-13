@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>提现</title>
+		<link rel="stylesheet" href="http://static.huibaoming.cn/wap/src/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+		<link rel="stylesheet" href="../src/css/userMoney.css">
+		<link rel="stylesheet" href="../src/css/wap.css">
+		<link rel="stylesheet" href="../src/css/wap_public.css">
+	</head>
+	<body class="bg-wechat" ng-app="app" ng-controller="ctrl">
+		<!--头部-->
+		<header class="back-header weui-flex">
+			<span class="back-header-icon icon-chevron-left flex_item1" onclick="javascript:window.history.go(-1);">返回</span>
+			<h1 class="back-header-h1 flex_item4">提现</h1>
+			<a class="flex_item1 header-right"></a>
+		</header>
+		<!--提现到银行卡-->
+		<div class="fix_containner">
+			<div class="star-con width92 margin-auto bg-white pad-b3 box-top">
+				<div class="msg-pad1 pad-t4">
+					<span class="text-font2">到账银行卡</span>
+					<span class="text-font2 bank-textColor mar-l4" id="bank_name" name="bank_name">建设银行(8328)</span>
+				</div>
+				<!--输入价钱-->
+				<div class=" bg-white pad-b1 pad-t1 pad-l2">
+					<div class="weui-cells__title cancle mar-all0 pad-t4 text-font2">提现金额</div>
+					<div class="weui-cells cancle mar-t2">
+						<div class="weui-cell">
+							<div class="weui-cell__bd text-font5 bank-inputBrb">
+								￥<input class="weui-input hx-abr-none width90 input-size" id="money" type="text" readonly>
+							</div>
+						</div>
+					</div>
+					<!--余额-->
+					<div class="weui-cells__title cancle mar-all0 pad-t1 pad-b1 text-font2">零钱余额￥<b class="text-weight" id="balance">1231.13</b>,
+						<a href="#" class="bank-textColor" id="all_take" onclick="toggle()">全部提取</a></div>
+				</div>
+				<a href="javascript:;" class="weui-btn weui-btn_primary mar-t3 bank-btn text-font3" id="btn_tixian">提现</a>
+				<a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_primary bank-btn hide">不在提现时间内</a>
+				<div class="msg-pad text-font2 mar-t1 sc-text-tab">本月还可以提现 <b class="bank-time text-weight text-font2" id="bank_time">100</b> 次</div>
+
+		</div>
+			<!--使用规则-->
+			<div class="getNeW-title text-c mar-t3" id="ask" name="showIOSActionSheet">
+				<b class="text-font3 sc-text-gray mar-t2 text-weight">使用规则</b>
+			</div>
+			<!--弹出框-->
+			<div id="actionSheet_wrap">
+				<div class="weui-mask" id="iosMask" style="display:none;"></div>
+				<div class="weui-actionsheet ask-con ask-div" id="iosActionsheet" style="background:#FAFAFA">
+					<p class="text-font4 sc-text-warning text-c">使用说明</p>
+					<div class="text-font2 sc-text-qgray mar-t3">
+						1.单笔交易金额5-50000元，交易时间为0.00-22.00，交易手续费为：0.49%+2 <br />
+						2.普通会员单日限额3000元，VIP会员单日限额10w元。 <br />
+						3.交易资金实时垫付至结算账户。<br />
+						4.支持信用卡、储蓄卡支付，严禁虚假交易或信用卡套现。
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--自定义键盘-->
+		<div class="weui-grids mar-t3 bg-white fix-footer">
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">1</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">2</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">3</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">4</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">5</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">6</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">7</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">8</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">9</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2 backspace" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">.</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2" name="btn_num">
+		<p class="weui-grid__label text-weight3 calculat_font">0</p>
+		</a>
+		<a href="#" class="weui-grid js_grid pad-t2 pad-b2 backspace" id="backspace">
+		<p class="weui-grid__label text-weight3 calculat_font">x</p>
+		</a>
+		</div>
+
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="../src/js/userMoney_com.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var $iosActionsheet = $('#iosActionsheet');
+	var $iosMask = $('#iosMask');
+
+	function hideActionSheet() {
+		$iosActionsheet.removeClass('weui-actionsheet_toggle');
+		$iosMask.fadeOut();
+		$iosActionsheet.css('display','none');
+	}
+
+	$iosMask.on('click', hideActionSheet);
+	$('#iosActionsheetCancel').on('click', hideActionSheet);
+	$("div[name=showIOSActionSheet]").on("click", function() {
+		$iosMask.css('visibility','visible');
+		$iosMask.css('opacity','1');
+		$iosActionsheet.css('display','block');
+		$iosActionsheet.addClass('weui-actionsheet_toggle');
+		$iosMask.fadeIn();
+	});
+
+	$('#showLoadingToast').on('click', function() {
+		if($('#loadingToast').css('display') != 'none') return;
+		loadingframe();
+
+	});
+</script>
+</html>
+
+

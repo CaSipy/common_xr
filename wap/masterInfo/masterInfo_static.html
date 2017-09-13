@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+		<link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+		<link rel="stylesheet" href="../src/css/wap.css">
+	    <link rel="stylesheet" type="text/css" href="../src/css/join.css"/>
+	</head>
+	<body>
+		<div>
+			<!--头部-->
+			<header class="back-header weui-flex bg-white header_bBor">
+				<span class="back-header-icon icon-chevron-left flex_item1 sc-text-blue" onclick="javascript:window.history.go(-1);">返回</span>
+				<h1 class="back-header-h1 flex_item4 sc-text-blue" ng-bind="sss">个人资料</h1>
+				<a href="updateInfo.do" class="flex_item1 header-right sc-text-blue"></a>
+			</header>
+			<!--主体部分-->
+			<section class="fix_containner">
+				<article>
+					<div class="weui-cells">
+						<!--昵称-->
+						<div class="weui-cell bg-white">
+							<div class="weui-cell__hd"><label class="weui-label text-font4">昵称</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input text-font3 text-r sc-text-gray" value="蓝枫" type="text">
+							</div>
+						</div>
+						<div class="weui-cell bg-white">
+							<div class="weui-cell__hd"><label class="weui-label text-font4">姓名</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input text-font3 text-r sc-text-gray" value="蓝枫" type="text">
+							</div>
+						</div>
+						<div class="weui-cell bg-white">
+							<div class="weui-cell__hd"><label class="weui-label text-font4">手机号</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input text-font3 text-r sc-text-gray" value="123123" type="number">
+							</div>
+						</div>
+						<div class="weui-cell bg-white">
+							<div class="weui-cell__hd"><label class="weui-label text-font4">银行卡号</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input text-font3 text-r sc-text-gray" value="132" type="number">
+							</div>
+						</div>
+						<div class="weui-cell bg-white">
+							<div class="weui-cell__hd"><label class="weui-label text-font4">持卡人姓名</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input text-font3 text-r sc-text-gray" value="蓝枫" type="text">
+							</div>
+						</div>
+						<div class="weui-cell bg-white">
+							<div class="weui-cell__hd"><label class="weui-label text-font4">保险单号</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input text-font3 text-r sc-text-gray" value="123" type="number">
+							</div>
+						</div>
+					</div>
+				</article>
+				<article>
+					<!--专业领域-->
+					<div class="weui-cell bg-white mar-t3 cancle">
+						<div class="weui-cell__hd"><label class="weui-label text-font4">专业领域</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input text-font3"  id='picker' type="text" placeholder="请选择专业领域" readonly="readonly">
+						</div>
+					</div>
+					<div class="weui-cell bg-white">
+						<div class="weui-cell__hd"><label class="weui-label text-font4">专业领域</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input text-font3" type="text" placeholder="请填写详细专业领域">
+						</div>
+					</div>
+					<!--服务区域-->
+					<div class="weui-cell bg-white">
+						<div class="weui-cell__hd"><label class="weui-label text-font4">服务区域</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input text-font3" id="start" type="text" placeholder="请选择服务区域" readonly="readonly">
+						</div>
+					</div>
+				</article>
+				<!--上传证件-->
+				<article class="weui-cells weui-cells_form" style="margin-top: .6rem;">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<div class="weui-uploader">
+								<div class="weui-uploader__hd">
+									<p class="weui-uploader__title text-font4">上传相关证件照</p>
+									
+								</div>
+								<div class="weui-uploader__bd">
+									
+									<div class="weui-uploader__input-box addS_img">
+										<input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="" capture="camera" ng-src="other_card_imgs">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+			<a href="javascript:;" class="weui-btn weui-btn_primary width90 mar-t1 mar-b5 bg-qblue"  ng-click="register()">保存</a>
+		</div>
+	</body>
+	<!--oss脚本接入-->
+	<script src="http://common.huibaoming.cn/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="http://common.huibaoming.cn/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="http://common.huibaoming.cn/jquery-weui/js/city-picker.js"></script>
+	<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+	<script src="../src/js/masterInfo.js" type="text/javascript" charset="utf-8"></script>
+</html>

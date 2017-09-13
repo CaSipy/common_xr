@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>填写资料</title>
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+		<link rel="stylesheet" href="../src/css/wap.css">
+		<link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+	    <link rel="stylesheet" href="../src/css/join.css">
+	</head>
+	<body>
+		<div class="audit1 hide">
+			<header class="audit_header">
+				<img src="../oss/wap/images/audit.png" class="audit_hImg"/>
+			</header>
+			<h1 class="audit_h1">您已成功提交认证资料！</h1>
+			<h2 class="audit_h2">请耐心等待审核结果</h2>
+			<a href="javascript:;" class="weui-btn weui-btn_primary width90 bg-qblue audit_btn"  ng-click="register()">确定</a>
+		</div>
+		<div class="audit2 text-c">
+			<header class="audit_header2 icon-warning-sign">
+			</header>
+			<h1 class="audit_h1">抱歉，您的审核没有通过...</h1>
+			<h2 class="audit_h2">请重新填写</h2>
+			<a href="javascript:;" class="weui-btn weui-btn_primary width90 bg-qblue audit_btn"  ng-click="register()">重新审核</a>
+			<a href="javascript:;" class="weui-btn weui-btn_default width90 ">关闭</a>
+		</div>
+	</body>
+</html>

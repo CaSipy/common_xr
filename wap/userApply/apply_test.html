@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+	    <link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+		<link rel="stylesheet" href="../src/css/wap.css">
+		<link rel="stylesheet" type="text/css" href="../src/css/apply.css"/>
+		<style type="text/css">
+			b{
+				font-weight: normal;
+			}
+		</style>
+	</head>
+	<body ng-app="app" ng-controller="ctrl">
+		<!--头部-->
+		<header class="back-header weui-flex bg-white header_bBor">
+			<span class="back-header-icon icon-chevron-left flex_item1 sc-text-blue" onclick="javascript:window.history.go(-1);"></span>
+			<h1 class="back-header-h1 flex_item4 sc-text-blue">申请售后</h1>
+			<a class="flex_item1 header-right  sc-text-blue"></a>
+		</header>
+		<!--文本域-->
+		<section class=" fix_containner mar-b0 pad-t1">
+			<article class="weui-cells weui-cells_form pad-b3 mar-t2">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<div class="weui-uploader">
+							<div class="weui-uploader__hd">
+								<p class="weui-uploader__title">文字说明</p>
+							</div>
+							<div class="weui-cell hx-abr  eva_trea ">
+								<div class="weui-cell__bd">
+									<textarea class="weui-textarea text-font3" placeholder="请输入文本" rows="3" ng-model="model_msg" onkeyup="calculate(this)"></textarea>
+									<div class="weui-textarea-counter text-font3"><span id="eva_num">0</span>/<span class="eva_num_all">200</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			
+			<!--上传图片-->
+			<article class="weui-cells weui-cells_form mar-t3">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<div class="weui-uploader">
+							<div class="weui-uploader__hd">
+								<p class="weui-uploader__title">上传图片</p>
+								<div class="weui-uploader__info"><b ng-bind="img_num">1</b>/3</div>
+							</div>
+							<div class="weui-uploader__bd img_container">
+					            <div class="img_item" ng-repeat="item in thumb">
+					                <div class="imglist" style="background-image:url({{item.imgSrc}})"></div>
+					<!--                 <span ng-if="item.imgSrc" ng-click="img_del($index)" style="cursor:pointer">删除</span> -->
+										<div class="del_icon icon-remove" ng-click="img_del($index)"></div>
+					            </div>
+					
+					            <div class="weui-uploader__input-box" ng-show="imglength<2">
+					                <input type="file" id="uploaderInput94" class="weui-uploader__input" accept="image/*" file-model="images" onchange="angular.element(this).scope().img_preview(this.files)"/>
+					            </div>
+					        </div>
+						</div>
+					</div>
+				</div>
+			</article>
+			
+		</section>
+		<a href="javascript:;" class="weui-btn margin-auto weui-btn_primary eva_btn bg-qblue width90" style="margin-top: 2rem;" ng-click="finishsecond()">提交申请</a>
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/city-picker.js"></script>
+	<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+	<script src="http://common.huibaoming.cn/angular/angular.js"></script>
+	<script src="../src/js/apply.js" type="text/javascript" charset="utf-8"></script>
+</html>

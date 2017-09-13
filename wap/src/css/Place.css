@@ -1,0 +1,87 @@
+i{
+	font-style: normal;
+}
+a:active{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.rP-header{
+	width: 100%;
+	display: table;
+	background: #F9F9F9;
+}
+.rP-header .m_search{
+	float: left;
+}
+.rP-header-h2{
+	width: 100%;
+	height: 100%;
+}
+.rP-cont{
+	width: 100%;
+}
+.rP-cont-mes-top{
+	width: 94%;
+	display: table;
+	padding:2% 3%;
+}
+.rP-cont-mes-center{
+	width: 94%;
+	padding:2% 3% ;
+}
+
+.rP_img{
+	width: 1rem;	
+}
+
+.rP_font{
+	padding-top: 0.2em;
+}
+.rP-fontClor{
+	color: #008CD7;
+}
+.rP-fontClor:before{
+	color: #E02E24 !important;
+}
+.rP-btn{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background: #008CD7;
+}
+.rP-btn a{
+	width: 90%;
+	color: white;
+	display: block;
+}
+.picon:before{
+	font-size: 1rem;
+	vertical-align: text-top;
+}
+.p-fColor{
+	color: #3C3C3C;
+}
+.p-imgColor{
+	color: #6C6C6C;
+}
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}
+.weui-switch-cp__input:checked ~ .weui-switch-cp__box, .weui-switch:checked{
+	border-color: #008CD7 !important;
+	background-color: #008CD7 !important;
+}
+.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before{
+	color: #008CD7 !important;
+}
+.weui-dialog__btn{
+	color: #008CD7 !important;
+}

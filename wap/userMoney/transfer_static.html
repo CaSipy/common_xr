@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>转账</title>
+		<link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+		<link rel="stylesheet" href="../src/css/userMoney.css?ver=1234">
+		<link rel="stylesheet" href="../src/css/wap.css">
+		<link rel="stylesheet" href="../src/css/wap_public.css">
+
+		
+	</head>
+	<body class="bg-wechat">
+		<!--头部-->
+		<header class="back-header weui-flex">
+			<span class="back-header-icon icon-chevron-left flex_item1" onclick="javascript:window.history.go(-1);">返回</span>
+			<h1 class="back-header-h1 flex_item4">转账</h1>
+			<a class="flex_item1 header-right"></a>
+		</header>
+		<!--提现到银行卡-->
+		<div class="fix_containner">
+			<div class="  account-contain box-top">
+				<div>
+					<span>对方账户</span><input type="text" placeholder="账号/手机号">
+				</div>
+			</div>
+			<div class="star-con  margin-auto bg-white pad-b3">
+				<div class="weui-flex msg-form">
+					<div class="weui-flex__item "><span class="text-font2">转账币数</span></div>
+					<div class="weui-flex__item text-r"><span class="text-font2 bank-textColor">手续费1%</span></div>
+				</div>
+				<!--输入价钱-->
+				<div class=" bg-white pad-b1 pad-t1 pad-l2">
+					<div class="weui-cells cancle mar-t2">
+						<div class="weui-cell">
+							<div class="weui-cell__bd text-font5 bank-inputBrb" onclick="keyboard()">
+								<input class="weui-input hx-abr-none width90 input-size" id="money" type="text" disabled >个
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="msg-pad text-font2 mar-t1 sc-text-tab">转账注明 <b class="bank-time text-weight text-font2" id="bank_time">100</b> 次</div>
+			</div>
+			<a href="javascript:;" class="weui-btn weui-btn_primary mar-t3 bank-btn text-font3" onclick="suretransfer()" >确认转账</a>
+			<center class="text-font2 sc-text-tab mar-t1" onclick="show()">转账记录</center>
+		</div>
+
+
+		<!--弹出框-->
+		<div id="about" class="weui-popup__container popup-bottom">
+			<div class="weui-popup__overlay weui-popup-overlay"></div>
+			<div class="weui-popup__modal" style="overflow:inherit;background:#F8F8F8">
+				<header class="back-header weui-flex">
+					<span class="back-header-icon icon-chevron-left flex_item1"></span>
+					<h1 class="back-header-h1 flex_item4">转账记录记录</h1>
+					<a class="flex_item1 header-right close-popup">关闭</a>
+				</header>
+				<!--记录内容区-->
+				<div class="fix_containner" >
+					<a class="weui-cell weui-cells_access" href="detail.html">
+						<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/header.jpg" alt="icon" style="width:30px"></div>
+						<div class="weui-cell__bd weui-cell_primary">
+							<p class="text-font4">红包-来自林某某</p>
+							<p class="text-font4 tip_c">2月20号&nbsp;12:90</p>
+						</div>
+						<div class="weui-cell__bd text-r">
+							<p class="hx_addc hx_fw">+1.12</p>
+							<p class="text-font1 hx_abc">剩余2233</p>
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--键盘弹出框-->
+		<div id="keyboard" class="weui-popup__container popup-bottom">
+			<div class="weui-popup__overlay"></div>
+			<div class="weui-popup__modal" style="overflow:inherit;background:#F8F8F8">
+				<div class="weui-grids bg-white">
+					<div class="close_keyboard" onclick="closeKeyboard()"><sapn class="icon icon-angle-down text-font5 close-popup"></sapn></div>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">1</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">2</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">3</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">4</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">5</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">6</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">7</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">8</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">9</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3 backspace" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">.</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3" name="btn_num">
+						<p class="weui-grid__label text-weight3 calculat_font">0</p>
+					</a>
+					<a href="#" class="weui-grid js_grid pad-t3 pad-b3 backspace" id="backspace">
+						<p class="weui-grid__label text-weight3 calculat_font">x</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--键盘弹出框-->
+
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+	<script src="../src/js/userMoney_com.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		function show(){
+			$("#about").popup();
+		}
+		function keyboard() {
+			$("#keyboard").popup();
+		}
+		function closeKeyboard() {
+			$.closePopup();
+		}
+		var str=4545155545;
+		function suretransfer() {
+			$.confirm({
+				title: '确认转账',
+				text: '账号：'+str,
+				onOK: function () {
+					//点击确认
+				},
+				onCancel: function () {
+				}
+			});
+		}
+
+	</script>
+</html>
+
+

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>首页</title>
+		<link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="http://common.huibaoming.cn/font-awesome-4.7.0/css/font-awesome.css"/>
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+		<link rel="stylesheet" href="../src/css/wap.css">
+		<link rel="stylesheet" href="../src/css/wap_public.css">
+		<link rel="stylesheet" href="../src/css/home_xr.css">
+	</head>
+
+	<body ng-controller="ctrl">
+		<header class="swiper-container">
+			<!--搜索框-->
+			<div class="Home_search" ng-click="home_ser()">
+				<input type=" text" class="" placeholder="请输入想要选择的项目"/>
+				<i class="fa fa-search"></i>
+			</div>
+			<!--swiper容器[可以随意更改该容器的样式-->
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" ng-repeat="item in json.Shuffling"><img src="{{item.imgurl}}" style="width:100%;height:14rem"></div>
+				
+			</div>
+		</header>
+		<!--通告区-->
+		<article class="weui-row bg-white nav_form mar-t1">
+			<div class="weui-col-20 mar-l2">
+				<img src="http://common.huibaoming.cn/wap/images/form.png" alt="" style="width:.9rem">
+				<span class="text-font3">公告</span>
+			</div>
+			<div class="weui-col-75" style="overflow: hidden; text-overflow: ellipsis;">
+				<span class="nav_form_title text-font3" ng-bind="announcement">夏季大甩卖，跳楼啦！！！！！</span>
+			</div>
+			<div class="weui-col-10 text-r"><span class="icon icon-angle-right"></span></div>
+		</article>
+		<!--导航区-->
+		<nav class="text-c bg-white mar-t1 pad-t2 pad-b2">
+			<div class="grid">
+				<div class="grid_item nav_item" ng-repeat="item in json.four">
+					<img ng-src="{{item.icon_img}}" src="http://common.huibaoming.cn/wap/images/icon/inchange.png" alt="">
+					<p ng-bind="item.icon_text">购物车</p>
+				</div>
+			</div>
+		</nav>
+		
+		<!--产品展示区-->
+		<section class="Home_sec weui-flex fix_containner">
+			<figure class="sec_left flex_item5 text-c">
+				<figcaption ng-bind="leftfig">空调清洗</figcaption>
+				<p class="sc-text-tab text-font2 pad-l2 pad-r2 text-astrict showLine-1" ng-bind="leftp">家人健康，从空调清洗开始</p>
+				<img ng-src="leftImg" src="../oss/wap/images/header.jpg" class="sec_leftImg u-radius mar-t2" alt="" />
+			</figure>
+			<article class="sec_right flex_item4">
+				<figure ng-repeat="item in json.figure" href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg pad-t2">
+					<div class="weui-media-box__bd text-c">
+						<h4 class="weui-media-box__title text-font4" ng-bind="item.h4">家电维修</h4>
+						<p class="weui-media-box__desc" ng-bind="item.p">价格美丽</p>
+					</div>
+					<div class="text-c sec_rightImg mar-l2">
+						<img class="weui-media-box__thumb sec_rightImg" ng-src="item.rightImg" src="../oss/wap/images/fwechat.png">
+					</div>
+				</figure>
+			</article>
+		</section>
+		<!--底部导航栏-->
+		<footer class="weui-tabbar" id="footer">
+	        <div class="weui-tabbar" name="footer">
+	            <a  class="weui-tabbar__item weui-bar__item--on">
+	                <!--<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>-->
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/icon/home1.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2 sc-text-blue">首页</p>
+	            </a>
+	            <a  class="weui-tabbar__item ">
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/icon/classify.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2">分类</p>
+	            </a>
+	            <a class="weui-tabbar__item ">
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/icon/search.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2">订单</p>
+	            </a>
+	            <a  class="weui-tabbar__item">
+	                <div class="weui-tabbar__icon weui-tar__img">
+	                    <img src="http://common.huibaoming.cn/wap/images/icon/user.png" alt="">
+	                </div>
+	                <p class="weui-tabbar__label text-font2">我</p>
+	            </a>
+	        </div>
+	    </footer>
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/angular/angular.js"></script>
+	<script src="../src/js/home.js" type="text/javascript" charset="utf-8"></script>
+</html>

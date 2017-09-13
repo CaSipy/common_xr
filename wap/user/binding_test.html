@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>用户手机绑定</title>
+		<!--oss脚本接入-->
+		
+		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+   		<link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+		<!--当前样式-->
+		<link rel="stylesheet" type="text/css" href="../src/css/wap.css"/>
+		<link rel="stylesheet" type="text/css" href="../src/css/user.css"/>
+		<script type="text/javascript">
+			var json={};
+		</script>
+		
+	</head>
+	<body ng-controller="ctrl" class="bg-wechat">
+		<div class="weui-cells weui-cells_form bg-white width90" style=" margin:auto; margin-top: 4rem !important;">
+		  
+		  <div class="weui-cell weui-cell_vcode">
+		    <div class="weui-cell__hd">
+		      <label class="weui-label bc-text text-font4">手机号</label>
+		    </div>
+		    <div class="weui-cell__bd">
+		      <input class="weui-input text-font3" type="tel" placeholder="请输入手机号" required  ng-model="phone">
+		    </div>
+		    <div class="weui-cell__ft">
+		      <a class="weui-vcode-btn text-font4" ng-click="Code()" ng-bind="get_code"></a>
+		    </div>
+		  </div>
+		  
+		  <div class="weui-cell">
+		    <div class="weui-cell__hd"><label class="weui-label bc-text text-font4">验证码</label></div>
+		    <div class="weui-cell__bd">
+		      <input class="weui-input text-font3" type="text"  placeholder="请输入验证码" ng-model="yanzhengma" required>
+		    </div>
+		  </div>
+		  
+		  <div class="weui-cell">
+		    <div class="weui-cell__hd"><label class="weui-label bc-text text-font4">昵称</label></div>
+		    <div class="weui-cell__bd">
+		      <input class="weui-input text-font3" type="text"  placeholder="请输入昵称" ng-model="Uname">
+		    </div>
+		  </div>
+		  <div class="weui-cell">
+		    <div class="weui-cell__hd"><label class="weui-label bc-text text-font4">密码</label></div>
+		    <div class="weui-cell__bd">
+		      <input class="weui-input text-font3" type="password"  placeholder="请输入密码" ng-model="Pass">
+		    </div>
+		  </div>
+		  
+		</div>
+		<a href="javascript:;" class="weui-btn weui-btn_primary width90" style="margin: auto; margin-top: 2rem;" ng-click="binding()">绑定</a>
+		
+	</body>
+	<!--oss脚本接入-->
+	<script src="http://common.huibaoming.cn/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://common.huibaoming.cn/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+	<!--本地-->
+	<script src="../src/js/user.js" type="text/javascript" charset="utf-8"></script>
+</html>

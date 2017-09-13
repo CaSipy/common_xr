@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+	    <link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+		<link rel="stylesheet" href="../src/css/wap.css">
+	    <link rel="stylesheet" href="../src/css/order.css">
+	</head>
+	<body class="bg-wechat">
+			<!--头部-->
+			<header class="back-header weui-flex bg-white header_bBor">
+				<span class="back-header-icon icon-chevron-left flex_item1 sc-text-blue" onclick="javascript:window.history.go(-1);"></span>
+				<h1 class="back-header-h1 flex_item4 sc-text-blue">下单</h1>
+				<a class="flex_item1 header-right  sc-text-blue"></a>
+			</header>
+			<address class="fix_containner mar-b0">
+				<div class="weui-cells cancle mar-t0" style="border-bottom:.2rem solid #666666">
+					<a class="weui-cell weui-cell_access" href="javascript:;" style="height:3.5rem">
+						<div class="weui-cell__hd text-c mar-r2">
+							<img src="http://common.huibaoming.cn/wap/images/location.png" alt="" style="width:20px;margin-right:0rem;margin-left:.15rem;display:block">
+							<p class="text-font2 mar-t1" style="font-style: normal;">地址</p>
+						</div>
+						<div class="weui-cell__bd mar-l2">
+							<p class="text-font5"><span class="text-weight2 mar-r2">菜</span><span class="text-font4">2123123123</span></p>
+							<p class="text-font3 sc-text-tab text-astrict showLine-2 mar-t1">广东德生哦都市风景哦史蒂夫单反</p>
+						</div>
+						<div class="weui-cell__ft mar-l4"></div>
+					</a>
+				</div>
+			</address>
+			<section class="section_padB">
+				<!--选择时间-->
+				<article class="weui-cell bg-white con_time">
+			        <div class="weui-cell__hd">
+			        	<label for="time-format" class="weui-label text-font4">
+			        		<i class="fa fa-clock-o time_i"></i>
+			        		服务日期
+			        	</label>
+			        </div>
+			        <div class="weui-cell__bd">
+			          <input class="weui-input text-r sc-text-tab" id="time-format" type="text" value="2012年12月12日 12点11分" readonly="">
+			        </div>
+			    </article>
+			    <!--商品块--><!-- 请后台人员自己加上这一块ng-的绑定-->
+			    <article>
+				    <header class="weui-cells mar-t0">
+						<div class="weui-cell">
+							<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/tou.png" style="width: 1.2rem;height: 1.2rem; margin-right: .5rem;"></div>
+							<div class="weui-cell__bd">
+								<p class="text-font3">家电维修</p>
+							</div>
+						</div>
+					</header>
+					<figure class="weui-panel__bd bg-white">
+					    <div class="weui-cell weui-flex">
+							<div class="weui-cell__bd flex_item3">
+								<p class="text-font4">
+									<span>电视机清洗</span>
+								</p>
+							</div>
+							<div class="weui-cell__ft text-font3 sc-text-gray bc-text mar-r2 text-l flex_item1">x1</div>
+							<!--点击数量-->
+						    <div class="gw_num flex_item3">
+								<span class="jian">-</span>
+								<input type="text" value="1" class="num">
+								<span class="add">+</span>
+							</div>
+							<div class="weui-cell__ft text-font3 bc-text flex_item2">￥300</div>
+						</div>
+					</figure>
+					<!--抵扣券-->
+					<figure class="weui-cells mar-t0 figure">
+				         <a class="weui-cell weui-cell_access pad-t0 pad-b0" href="javascript:;">
+							<div class="weui-cell__bd text-font3">
+								<p>抵扣券</p>
+							</div>
+							<div class="weui-cell__ft text-font2">有一张券可用</div>
+						</a>
+					</figure>
+					<!--积分抵扣-->
+					<figure class="weui-cells mar-t0 figure">
+				        <div class="weui-cell pad-t0 pad-b0">
+							<div class="weui-cell__hd text-font3">
+								<p>积分抵扣</p>
+							</div>
+							<div class="weui-cell__bd">
+								<input type="text" class="weui-input text-r text-font3 input_num" placeholder="请输入数值" />
+							</div>
+							<div class="weui-cell__ft bc-text text-font2 mar-l3">积分</div>
+						</div>
+					</figure>
+					<!--订单价格-->
+					<figure class="weui-cells mar-t0 figure">
+						<div class="weui-cell pad-t0 pad-b0">
+							<div class="weui-cell__bd">
+								<p class="text-font4 sc-text-gray">
+									<span>订单￥<b>320</b></span>
+									<span class="text-font3">优惠￥<b>20</b></span>
+								</p>
+							</div>
+							<div class="weui-cell__ft text-font3 bc-text mar-r2">待支付</div>
+							<div class="weui-cell__ft text-font3 bc-text sc-text-warning">￥300</div>
+						</div>
+					</figure>
+				</article>
+				<!--选择支付方式-->
+				<article class="weui-cells weui-cells_radio mar-t5">
+						<label class="weui-cell weui-check__label" for="x11">
+						  	<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/wechat.png" style="width:1.5rem; height:1.5rem;"></div>
+						    <div class="weui-cell__bd">
+						      	<p>微信支付</p>
+						    </div>
+						    <div class="weui-cell__ft">
+						      	<input type="radio" class="weui-check" name="radio1" id="x11">
+						      	<span class="weui-icon-checked"></span>
+						    </div>
+						</label>
+						<label class="weui-cell weui-check__label" for="x12">
+						  	<div class="weui-cell__hd"><img src="http://common.huibaoming.cn/wap/images/PayTreasure.png" style="width:1.5rem; height:1.5rem;"></div>
+						    <div class="weui-cell__bd">
+						      	<p>支付宝支付</p>
+						    </div>
+						    <div class="weui-cell__ft">
+						      	<input type="radio" class="weui-check" name="radio1" id="x12">
+						      	<span class="weui-icon-checked"></span>
+						    </div>
+						</label>
+				</article>
+				<!--上传图片-->
+				<article class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<div class="weui-uploader">
+								<div class="weui-uploader__hd">
+									<p class="weui-uploader__title">上传图片</p>
+									<div class="weui-uploader__info"><b>1</b>/3</div>
+								</div>
+								<div class="weui-uploader__bd">
+									<ul class="weui-uploader__files" id="uploaderFiles">
+										<li class="weui-uploader__file" style="background-image:url(../oss/wap/images/banner1.jpg)"></li>
+										<li class="weui-uploader__file weui-uploader__file_status" style="background-image:url(./images/pic_160.png)">
+											<div class="weui-uploader__file-content">
+												<i class="weui-icon-warn"></i>
+											</div>
+										</li>
+									</ul>
+									<div class="weui-uploader__input-box">
+										<input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="" capture="camera">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!--文本域-->
+				<article class="weui-cells weui-cells_form pad-b3">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">
+							<div class="weui-uploader">
+								<div class="weui-uploader__hd">
+									<p class="weui-uploader__title">文字说明</p>
+								</div>
+								<div class="weui-cell hx-abr  eva_trea ">
+									<div class="weui-cell__bd">
+										<textarea class="weui-textarea text-font3" placeholder="请输入文本" rows="3" onkeyup="calculate(this)"></textarea>
+										<div class="weui-textarea-counter text-font3"><span id="eva_num">0</span>/<span class="eva_num_all">200</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+			<footer id="goods_lan" class="weui-flex con_footer">
+	            <div class="flex_item3 text-l">
+	               <p class="mar-l5  bc-text-header"> 
+	               		<span class="text-rfont035">待支付: </span>
+	               		<span class="text-rfont04">￥200</span>
+	               </p>
+	            </div>
+	            <div class="flex_item2 text-c">
+	                <p class="bg-green bc-text-header text-rfont04 footer_btn1">选择师傅</p>
+	            </div>
+	            <div class="flex_item2 text-c">
+	                <p class="bg-qblue bc-text-header text-rfont04" style="height:3rem; line-height:3rem;">提交发布</p>
+	            </div>
+	       </footer>   
+		</div>
+	</body>
+</html>
+<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+<script src="http://common.huibaoming.cn/jquery-weui/js/city-picker.js"></script>
+<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+<script src="../src/js/Confirm.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	function calculate(obj) {
+		if($(obj).val().length > $(".eva_num_all").html()) {
+			$.toast("文字超过限制", "forbidden");
+	
+			$(obj).val($(obj).val().substring(0, $(".eva_num_all").html()));
+		} else {
+			$('#eva_num').html($(obj).val().length);
+		}
+	}
+</script>

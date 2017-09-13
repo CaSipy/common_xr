@@ -1,0 +1,22 @@
+.pD-nav{
+	height: 3rem;
+}
+.pD-btn{
+	width: 90%;
+	margin: auto;
+	font-weight: bold;
+	margin-top: 2rem;
+}
+.header_bBor{
+	border-bottom: 1px solid #D7D7D7;
+}
+.bg-qblue{
+	background: #008CD7 !important;
+}
+.sc-text-blue{
+	color: #008CD7 !important;
+}
+.weui-switch-cp__input:checked ~ .weui-switch-cp__box, .weui-switch:checked{
+	border-color: #008CD7 !important;
+	background-color: #008CD7 !important;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>评价</title>
+		<!--oss库资源引用-->
+		<!--字体图标库-->
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/font-awesome/css/font-awesome.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/weui.css">
+	    <link rel="stylesheet" href="http://common.huibaoming.cn/jquery-weui/css/jquery-weui.css">
+	    <!--当前项目样式引用-->
+	    <link rel="stylesheet" type="text/css" href="../src/css/wap_public.css"/>
+		<link rel="stylesheet" href="../src/css/wap.css">
+	    <link rel="stylesheet" href="../src/css/userOrder.css">
+	</head>
+	<body>
+		<!--头部-->
+		<header class="back-header weui-flex bg-white header_bBor">
+			<span class="back-header-icon icon-chevron-left flex_item1 sc-text-blue" onclick="javascript:window.history.go(-1);"></span>
+			<h1 class="back-header-h1 flex_item4 sc-text-blue">查看评价</h1>
+			<a class="flex_item1 header-right sc-text-blue"></a>
+		</header>
+		<aside class="weui-panel weui-panel_access fix_containner mar-b0">
+			<div class="weui-panel__bd">
+				<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+					<div class="weui-media-box__hd u-radius eva_img">
+						<img class="weui-media-box__thumb weui-media-box__hd u-radius eva_img" src="http://common.huibaoming.cn/wap/images/banner1.jpg">
+					</div>
+					<div class="weui-media-box__bd">
+						<h4 class="weui-media-box__title text-font5">XXX用户</h4>
+						<p class="weui-media-box__desc text-font2">联系方式：1231231231</p>
+					</div>
+				</a>
+			</div>
+		</aside>
+		<section class="bg-white">
+			<header id="starEva" class="starEva">
+				<span class="icon-star eva_star eva_active"></span>
+				<span class="icon-star eva_star eva_active"></span>
+				<span class="icon-star eva_star eva_active"></span>
+				<span class="icon-star eva_star eva_active"></span>
+				<span class="icon-star eva_star"></span>
+			</header>
+			<figure class="eva_figure">
+				<div class="weui-cells weui-cells_form eva_trea_M pad-all2 text-font3">
+					服务很一般 很没有灵性
+					
+				</div>
+			</figure>
+		</section>
+		<a href="javascript:;" class="weui-btn margin-auto weui-btn_primary eva_btn bg-qblue width90">确定</a>
+	</body>
+	<script src="http://common.huibaoming.cn/jquery/jquery.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/jquery-weui.js"></script>
+	<script src="http://common.huibaoming.cn/jquery-weui/js/city-picker.js"></script>
+	<script src="http://common.huibaoming.cn/swiper/js/swiper.js"></script>
+	<script type="text/javascript">
+		
+		function calculate(obj){
+			
+			if($(obj).val().length>$(".eva_num_all").html()){
+				$.toast("文字超过限制","forbidden");
+				
+				$(obj).val($(obj).val().substring(0,$(".eva_num_all").html()));
+			}else{
+				$('#eva_num').html($(obj).val().length);
+			}
+		}
+		
+	</script>
+</html>
